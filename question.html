@@ -7,92 +7,66 @@
 
 <body>
 
-    <div id="question">
-        <p>คำถามข้อที่ 1</p>
-        <p>ท่านรู้สึกพึงพอใจในชีวิต</p>
+    <div >
+        <p>คำถามข้อที่ </p><p id="number">1</p>
+        <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
+        <p>point : </p><p id="point"></p>
     </div>
-    <div id="question">
-        <p>คำถามข้อที่ 2</p>
-        <p>ท่านรู้สึกสบายใจ</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 3</p>
-        <p>ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 4</p>
-        <p>ท่านรู้สึกผิดหวังในตัวเอง</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 5</p>
-        <p>ท่านรู้สึกว่าชีวิตของท่านมีแต่ความทุกข์</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 6</p>
-        <p>ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 7</p>
-        <p>ท่านมั่นใจว่าสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงเกิดขึ้น</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 8</p>
-        <p>ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 9</p>
-        <p>ท่านรู้สึกเห็นใจเมื่อผู้อื่นมีทุกข์</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 10</p>
-        <p>ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 11</p>
-        <p>ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 12</p>
-        <p>ท่านรู้สึกภูมิใจในตนเอง</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 13</p>
-        <p>ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 14</p>
-        <p>หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี</p>
-    </div>
-    <div id="question">
-        <p>คำถามข้อที่ 15</p>
-        <p>สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน</p>
-    </div>
-
 
     <div id="btn-group-point">
-    <button onclick="onePoint()">ไม่เลย</button>
-    <button onclick="twoPoint()">เล็กน้อย</button>
-    <button onclick="threePoint()">มาก</button>
-    <button onclick="fourPoint()">มากที่สุด</button>
+        <button onclick="onePoint()">ไม่เลย</button>
+        <button onclick="twoPoint()">เล็กน้อย</button>
+        <button onclick="threePoint()">มาก</button>
+        <button onclick="fourPoint()">มากที่สุด</button>
     </div>
 
     <script>
-        var point=0
+        var number=1
+        var point = 0
+        var questions = ["ท่านรู้สึกสบายใจ", 
+            "ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน","ท่านรู้สึกผิดหวังในตัวเอง", 
+            "ท่านรู้สึกว่าชีวิตของท่านมีแต่ความทุกข์","ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)",
+            "ท่านมั่นใจว่าสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงเกิดขึ้น","ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต",
+            "ท่านรู้สึกเห็นใจเมื่อผู้อื่นมีทุกข์","ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา",
+            "ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส","ท่านรู้สึกภูมิใจในตนเอง",
+            "ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว","หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี",
+            "สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน"
+        ]
         function onePoint() {
-            point=point+1
-            console.log(point)
+            if(number<15){
+            point = point + 1
+            document.getElementById("number").innerHTML =number+1;
+            document.getElementById("question").innerHTML =questions[number-1];
+            document.getElementById("point").innerHTML =point;
+            number++
+            }
         }
         function twoPoint() {
-            point=point+2
-            console.log(point)
+            if(number<15){
+            point = point + 2
+            document.getElementById("number").innerHTML =number+1;
+            document.getElementById("question").innerHTML =questions[number-1];
+            document.getElementById("point").innerHTML =point;
+            number++
+            }
         }
         function threePoint() {
-            point=point+3
-            console.log(point)
+            if(number<15){
+            point = point + 3
+            document.getElementById("number").innerHTML =number+1;
+            document.getElementById("question").innerHTML =questions[number-1];
+            document.getElementById("point").innerHTML =point;
+            number++
+            }
         }
         function fourPoint() {
-            point=point+4
-            console.log(point)
+            if(number<15){
+            point = point + 4
+            document.getElementById("number").innerHTML =number+1;
+            document.getElementById("question").innerHTML =questions[number-1];
+            document.getElementById("point").innerHTML =point;
+            number++
+            }
         }
     </script>
 
