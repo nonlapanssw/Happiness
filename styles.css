@@ -1,0 +1,68 @@
+.videoWrapper {
+	position: relative;
+	padding-bottom: 45%; /* 16:9 */
+	padding-top: 25px;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#HAPPINESS{
+	font-family: Kanit;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 165px;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color: #F6BA38;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:0% ;
+}
+#btn-enter{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	background: #FE6B73;
+	border-radius: 20px;
+	font-family: Kanit;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 100%;
+	padding: 1%;
+	font-size: 36px;
+	align-items: center;
+	color: #FDF3DD;
+	border: 1px solid #FDF3DD;
+}
+#btn-enter:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #FDF3DD;
+	color: #FE6B73;
+	cursor: pointer;
+	width: 21%;
+	transition-duration: 0.4s;
+}
+#btn-enter:active {
+    background-color: #FE6B73;
+    color:#FDF3DD;
+}
+#btn-group-point{
+	position: relative;
+	align-items: center;
+	text-align: center;
+}
+#btn-group-point button{
+	font-family: Kanit;
+	font-style: normal;
+	background-color: #C4C4C4; 
+  	cursor: pointer; 
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
