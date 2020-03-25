@@ -7,7 +7,7 @@
         <button onclick="main()">ภาพยนตร์สารคดีสั้น</button>
         <button onclick="test()">แบบทดสอบความสุข</button>
         <button onclick="happiness()">เกี่ยวกับความสุข</button>
-        <button onclick="creator()">ผู้จัดทำ</button>       
+        <button onclick="creator()">ผู้จัดทำ</button>
     </div>
 </head>
 
@@ -19,12 +19,25 @@
         <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่าน</p>
         <p>มากที่สุด และขอความร่วมมือตอบคำถามทุกข้อ</p>
         <p>ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
-        <button onclick="enterToTest()">เข้าสู้ทำแบบทดสอบ</button>
+        <button onclick="enterToExplanation()">เข้าสู้ทำแบบทดสอบ</button>
     </div>
 
+    <div id="explanation">
+        <h1>คำชี้แจง :</h1>
+        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับตัวท่านมากที่สุดและขอความร่วมมือตอบคำถามทุกข้อ</p>
+        <p>คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่านในช่วง 1
+            เดือนที่ผ่านมาจนถึงปัจจุบันให้ท่านสำรวจตัวท่านเองและประเมินเหตุการณ์ </p>
+        <p>อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใดโดยคำตอบจะมี 4 ตัวเลือก คือ</p>
 
-
-
+        <li>- มากที่สุด หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด หรือเห็นด้วย กับเรื่องนั้น ๆ
+            มากที่สุด</li>
+        <li>- มาก หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มาก หรือเห็นด้วยกับเรื่องนั้น ๆ มาก</li>
+        <li>- เล็กน้อย หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อยหรือเห็นด้วยกับเรื่องนั้น ๆ
+            เพียงเล็กน้อย</li>
+        <li>- ไม่เลย หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก หรือไม่เห็นด้วยกับเรื่องนั้น ๆ</li>
+        
+        <button onclick="enterToTest()">ถัดไป ></button>
+    </div>
     <div id="question-group">
         <div id="number-question">
             <p>คำถามข้อที่ </p>
@@ -109,17 +122,39 @@
                 document.getElementById("result").style.display = "block";
             }
         }
-        function enterToTest(){
+        function enterToExplanation() {
             document.getElementById("main-test").style.display = "none";
+            document.getElementById("explanation").style.display = "block";
+        }
+
+        function enterToTest() {
+            document.getElementById("explanation").style.display = "none";
             document.getElementById("question-group").style.display = "block";
         }
+
+
         function analysis() {
             if (point > 40) {
                 window.location.href = "/first.html";
             }
         }
 
+        function happiness(){
+            window.location.href = "/happiness.html";
+        }
 
+        function main() {
+            window.location.href = "/main.html";
+        } 
+
+        function test(){
+            window.location.href = "/test.html";
+        }
+
+        function creator(){
+            window.location.href = "/creator.html";
+        }
+    
     </script>
 
 </body>
