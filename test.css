@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'anakotmaibold';
+	src: url('Anakotmai-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anakotmailight';
+	src: url('Anakotmai-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'anakotmai';
+	src: url('Anakotmai-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body, html{
+	font-family:anakotmai;
+    margin:0;
+    padding:0;
+    background-color:#FEB954;
+}
+#btn-header{
+	align-items: center;
+	text-align: center;
+	background-color: #273564;
+	padding: 1%;
+}
+#btn-header button{
+	color:#FAF3EB;
+	font-size: 18px;
+	border: none;
+	background: none;
+	font-family:anakotmai;
+	font-weight: normal;
+	cursor: pointer;
+	margin-right: 5%;
+}
+#btn-header button:hover{
+	transition-duration: 0.5s;
+	background-color:#FEB954;   
+}
+#main-test{
+    right: 10%;
+}
+#btn-group-point{
+	position: relative;
+	align-items: center;
+	text-align: center;
+}
+#btn-group-point button{
+	font-family:anakotmai;
+	font-style: normal;
+	background-color: #C4C4C4; 
+  	cursor: pointer; 
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+#result,#question-group{
+	display: none;
+}

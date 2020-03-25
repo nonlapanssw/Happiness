@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/test.css">
+    <div id="btn-header">
+        <button onclick="main()">ภาพยนตร์สารคดีสั้น</button>
+        <button onclick="test()">แบบทดสอบความสุข</button>
+        <button onclick="happiness()">เกี่ยวกับความสุข</button>
+        <button onclick="creator()">ผู้จัดทำ</button>       
+    </div>
+</head>
+
+<body>
+    <div id="main-test">
+        <img></img>
+        <h2>แบบทดสอบ</h2>
+        <h2>ดัชนีชี้วัดความสุขคนไทยฉบับสั้น</h2>
+        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่าน</p>
+        <p>มากที่สุด และขอความร่วมมือตอบคำถามทุกข้อ</p>
+        <p>ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
+        <button onclick="enterToTest()">เข้าสู้ทำแบบทดสอบ</button>
+    </div>
+
+
+
+
+    <div id="question-group">
+        <div id="number-question">
+            <p>คำถามข้อที่ </p>
+            <p id="number">1</p>
+            <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
+        </div>
+
+        <div id="btn-group-point">
+            <button onclick="fourPoint()">มากที่สุด</button>
+            <button onclick="threePoint()">มาก</button>
+            <button onclick="twoPoint()">เล็กน้อย</button>
+            <button onclick="onePoint()">ไม่เลย</button>
+        </div>
+    </div>
+    <div id="result">
+        <p>สรุปผลคะแนน</p>
+        <div id=point></div>
+        <button onclick="analysis()" id="btn-result">วิเคราะห์คะแนน</button>
+    </div>
+
+    <script>
+        var number = 1
+        var point = 0
+        var questions = ["ท่านรู้สึกสบายใจ",
+            "ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน", "ท่านรู้สึกผิดหวังในตัวเอง",
+            "ท่านรู้สึกว่าชีวิตของท่านมีแต่ความทุกข์", "ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)",
+            "ท่านมั่นใจว่าสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงเกิดขึ้น", "ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต",
+            "ท่านรู้สึกเห็นใจเมื่อผู้อื่นมีทุกข์", "ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา",
+            "ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส", "ท่านรู้สึกภูมิใจในตนเอง",
+            "ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว", "หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี",
+            "สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน"
+        ]
+        function onePoint() {
+            point = point + 1
+            if (number < 15) {
+                document.getElementById("number").innerHTML = number + 1;
+                document.getElementById("question").innerHTML = questions[number - 1];
+                number++
+            } else if (number = 15) {
+                document.getElementById("number-question").style.display = "none";
+                document.getElementById("btn-group-point").style.display = "none";
+                document.getElementById("point").innerHTML = point;
+                document.getElementById("result").style.display = "block";
+            }
+        }
+        function twoPoint() {
+            point = point + 2
+            if (number < 15) {
+                document.getElementById("number").innerHTML = number + 1;
+                document.getElementById("question").innerHTML = questions[number - 1];
+                number++
+            } else if (number = 15) {
+                document.getElementById("number-question").style.display = "none";
+                document.getElementById("btn-group-point").style.display = "none";
+                document.getElementById("point").innerHTML = point;
+                document.getElementById("result").style.display = "block";
+            }
+        }
+        function threePoint() {
+            point = point + 3
+            if (number < 15) {
+                document.getElementById("number").innerHTML = number + 1;
+                document.getElementById("question").innerHTML = questions[number - 1];
+                number++
+            } else if (number = 15) {
+                document.getElementById("number-question").style.display = "none";
+                document.getElementById("btn-group-point").style.display = "none";
+                document.getElementById("point").innerHTML = point;
+                document.getElementById("result").style.display = "block";
+            }
+        }
+        function fourPoint() {
+            point = point + 4
+            if (number < 15) {
+                document.getElementById("number").innerHTML = number + 1;
+                document.getElementById("question").innerHTML = questions[number - 1];
+                number++
+            } else if (number = 15) {
+                document.getElementById("number-question").style.display = "none";
+                document.getElementById("btn-group-point").style.display = "none";
+                document.getElementById("point").innerHTML = point;
+                document.getElementById("result").style.display = "block";
+            }
+        }
+        function enterToTest(){
+            document.getElementById("main-test").style.display = "none";
+            document.getElementById("question-group").style.display = "block";
+        }
+        function analysis() {
+            if (point > 40) {
+                window.location.href = "/first.html";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

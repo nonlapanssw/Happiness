@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'anakotmaibold';
+	src: url('Anakotmai-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anakotmailight';
+	src: url('Anakotmai-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'anakotmai';
+	src: url('Anakotmai-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}html,body{
+    background-color:#273564;
+}
+#btn-header{
+	align-items: center;
+	text-align: center;
+	background-color: #273564;
+	padding: 1%;
+}
+#btn-header button{
+	color:#FAF3EB;
+	font-size: 18px;
+	border: none;
+	background: none;
+	font-family:anakotmai;
+	font-weight: normal;
+	cursor: pointer;
+	margin-right: 5%;
+}
+#creator{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+	background-color:#FAF3EB;
+	width: 40%;
+	text-align: center;
+	padding:1%;
+    border-radius: 10%;
+    font-family: anakotmai;
+}

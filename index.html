@@ -2,19 +2,38 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/index.css">
+    <div id="btn-header">
+        <button onclick="main()">ภาพยนตร์สารคดีสั้น</button>
+        <button onclick="test()">แบบทดสอบความสุข</button>
+        <button onclick="happiness()">เกี่ยวกับความสุข</button>
+        <button onclick="creator()">ผู้จัดทำ</button>       
+    </div>
+
 </head>
 
 <body>
 
     <p id="HAPPINESS">HAPPINESS</p>
-    <button id="btn-enter" onClick=linkToVDO()>เข้าสู่คลิป</button>
+    <button id="btn-enter" onClick=linkToVDO()>START</button>
 
 
     <script>
-        function linkToVDO() {
-            window.location.href = "/first.html";
+        function happiness(){
+            window.location.href = "/happiness.html";
+        }
+
+        function main() {
+            window.location.href = "/main.html";
         } 
+
+        function test(){
+            window.location.href = "/test.html";
+        }
+
+        function creator(){
+            window.location.href = "/creator.html";
+        }
     </script>
 
 </body>
