@@ -115,7 +115,7 @@
             <h2> คะแนน</h2>
             <br><br>
             <h3>การแปลผลการประเมิน</h3><br>
-            <h2 id="analysis">kk</h2>
+            <h2 id="analysis"></h2>
             <br>
             <p>เกณฑ์ปกติที่กำหนด</p>
             <p>คะแนน 0 - 43 มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)</p>
@@ -155,10 +155,14 @@
                 document.getElementById("result").style.display = "block";
                 if (point < 44) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                }else if(point>44&&point<=50){
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
+                } else if (point > 44 && point <= 50) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                }else{
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
+                } else {
                     document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
+
                 }
             }
         }
@@ -175,10 +179,13 @@
                 document.getElementById("result").style.display = "block";
                 if (point < 44) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                }else if(point>44&&point<=50){
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
+                } else if (point > 44 && point <= 50) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                }else{
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
+                } else {
                     document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
                 }
             }
         }
@@ -195,10 +202,13 @@
                 document.getElementById("result").style.display = "block";
                 if (point < 44) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                }else if(point>44&&point<=50){
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
+                } else if (point > 44 && point <= 50) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                }else{
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
+                } else {
                     document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
                 }
             }
         }
@@ -215,10 +225,13 @@
                 document.getElementById("result").style.display = "block";
                 if (point < 44) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                }else if(point>44&&point<=50){
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
+                } else if (point > 44 && point <= 50) {
                     document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                }else{
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
+                } else {
                     document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
                 }
             }
         }

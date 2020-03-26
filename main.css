@@ -1,14 +1,28 @@
 body{
-    background-color: white;
+    background-color:white;
     margin:0;
     padding:0;
+    height: 100%;
+    overflow-y: hidden;
 }
-.videoWrapper {
-	padding-bottom: 45%; /* 16:9 */
+@font-face {
+    font-family: 'anakotmai';
+	src: url('Anakotmai-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
-.videoWrapper iframe {
-	position: absolute;
+#player {
+    padding-bottom: 45%; /* 16:9 */
+    position: absolute;
 	width: 100%;
     height: 100%;
-    
+}
+#btn-test{
+    display: none;
+    font-family: 'anakotmai';
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    padding: 2%;
 }
