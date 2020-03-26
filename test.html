@@ -4,10 +4,10 @@
 <head>
     <link rel="stylesheet" href="/test.css">
     <div id="btn-header">
-        <button onclick="main()">ภาพยนตร์สารคดีสั้น</button>
-        <button onclick="test()">แบบทดสอบความสุข</button>
-        <button onclick="happiness()">เกี่ยวกับความสุข</button>
-        <button onclick="creator()">ผู้จัดทำ</button>
+        <button onclick="location.href='/main.html';">ภาพยนตร์สารคดีสั้น</button>
+        <button onclick="location.href='/test.html';">แบบทดสอบความสุข</button>
+        <button onclick="location.href='/happiness.html';">เกี่ยวกับความสุข</button>
+        <button onclick="location.href='/creator.html';">ผู้จัดทำ</button>
     </div>
 </head>
 
@@ -19,7 +19,7 @@
         <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่าน</p>
         <p>มากที่สุด และขอความร่วมมือตอบคำถามทุกข้อ</p>
         <p>ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
-        <button onclick="enterToExplanation()">เข้าสู้ทำแบบทดสอบ</button>
+        <button onclick="enterToExplanation()">เข้าสู่ทำแบบทดสอบ</button>
     </div>
 
     <div id="explanation">
@@ -35,9 +35,53 @@
         <li>- เล็กน้อย หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อยหรือเห็นด้วยกับเรื่องนั้น ๆ
             เพียงเล็กน้อย</li>
         <li>- ไม่เลย หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก หรือไม่เห็นด้วยกับเรื่องนั้น ๆ</li>
-        
-        <button onclick="enterToTest()">ถัดไป ></button>
+
+        <button onclick="user()">ถัดไป ></button>
     </div>
+    <div id="data-user">
+        <p>กรุณาระบุรายละเอียดของคุณ ให้ครบด้วยค่ะ</p>
+        <label for="sex">เพศ :</label>
+        <select id="sex">
+            <option selected>กรุณาเลือก</option>
+            <option value="male">ชาย</option>
+            <option value="female">หญิง</option>
+        </select>
+        <br>
+        <label for="age">อายุ :</label>
+        <select id="age">
+            <option selected>กรุณาเลือก</option>
+            <option value="0-12">0-12 ปี</option>
+            <option value="13-19">13-19 ปี</option>
+            <option value="20-25">20-25 ปี</option>
+            <option value="26-39">26-39 ปี</option>
+            <option value="40-59">40-59 ปี</option>
+            <option value="60up">60 ปีขึ้นไป</option>
+        </select>
+        <br>
+        <label for="education">การศึกษา :</label>
+        <select id="education">
+            <option selected>กรุณาเลือก</option>
+            <option value="primary">ประถมศึกษา</option>
+            <option value="highschool">มัธยมศึกษา</option>
+            <option value="vocational">ปวช / ปวส / อนุปริญญา</option>
+            <option value="bachelor">ปริญญาตรี</option>
+            <option value="master-up">ปริญญาโท / เอก</option>
+        </select>
+        <br>
+        <label for="career">อาชีพ :</label>
+        <select id="education">
+            <option selected>กรุณาเลือก</option>
+            <option value="student">นักเรียน / นิสิต / นักศึกษา</option>
+            <option value="freelance">ค้าขาย / รับจ้าง / ธุรกิจส่วนตัว</option>
+            <option value="employee">พนักงานบริษัท / ห้างร้าน</option>
+            <option value="civil-service">รับราชการ / รัฐวิสาหกิจ</option>
+            <option value="house-worker">งานบ้าน</option>
+        </select>
+        <br>
+        <button onclick="enterToTest()">เริ่มทำการทดสอบ</button>
+    </div>
+
+
     <div id="question-group">
         <div id="number-question">
             <p>คำถามข้อที่ </p>
@@ -53,9 +97,37 @@
         </div>
     </div>
     <div id="result">
-        <p>สรุปผลคะแนน</p>
-        <div id=point></div>
-        <button onclick="analysis()" id="btn-result">วิเคราะห์คะแนน</button>
+        <div class="videoWrapper">
+            <iframe id="video" width="700" height="450" src="" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </iframe>
+            <div id="btn-menu">
+                <button onclick="location.href='/test.html';">กลับไปหน้าแบบทดสอบ</button>
+                <button onclick="location.href='/happiness.html';">ข้อมูลเกี่ยวกับความสุข</button>
+            </div>
+        </div>
+        <span>
+            <h3>ขอบคุณที่เข้าร่วมการประเมิน</h3><br>
+            <h3>แบบทดสอบความสุข</h3><br><br>
+            <h2>คุณได้คะแนนรวม </h2>
+            <h2 id=point></h2>
+            <h2> คะแนน</h2>
+            <br><br>
+            <h3>การแปลผลการประเมิน</h3><br>
+            <h2 id="analysis">kk</h2>
+            <br>
+            <p>เกณฑ์ปกติที่กำหนด</p>
+            <p>คะแนน 0 - 43 มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)</p>
+            <p>คะแนน 44 - 50 มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)</p>
+            <p>คะแนนมากกว่า 50 มีสุขภาพจิตดีกว่าคนทั่วไป (Good)</p>
+            <br>
+            <p>คำแนะนำเบื้องต้น:</p>
+            <p>ในกรณที่ท่านมีคะแนนอยู่ในกลุ่มสุขภาพจิตต่ำกว่าคนทั่วไป</p>
+            <p>ท่านอาจช่วยเหลือตนเองเบื้องต้น</p>
+            <p>โดยขอรับบริการปรึกษาจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้</p>
+            <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
+        </span>
     </div>
 
     <script>
@@ -81,6 +153,13 @@
                 document.getElementById("btn-group-point").style.display = "none";
                 document.getElementById("point").innerHTML = point;
                 document.getElementById("result").style.display = "block";
+                if (point < 44) {
+                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
+                }else if(point>44&&point<=50){
+                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
+                }else{
+                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                }
             }
         }
         function twoPoint() {
@@ -94,6 +173,13 @@
                 document.getElementById("btn-group-point").style.display = "none";
                 document.getElementById("point").innerHTML = point;
                 document.getElementById("result").style.display = "block";
+                if (point < 44) {
+                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
+                }else if(point>44&&point<=50){
+                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
+                }else{
+                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                }
             }
         }
         function threePoint() {
@@ -107,6 +193,13 @@
                 document.getElementById("btn-group-point").style.display = "none";
                 document.getElementById("point").innerHTML = point;
                 document.getElementById("result").style.display = "block";
+                if (point < 44) {
+                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
+                }else if(point>44&&point<=50){
+                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
+                }else{
+                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                }
             }
         }
         function fourPoint() {
@@ -120,41 +213,29 @@
                 document.getElementById("btn-group-point").style.display = "none";
                 document.getElementById("point").innerHTML = point;
                 document.getElementById("result").style.display = "block";
+                if (point < 44) {
+                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
+                }else if(point>44&&point<=50){
+                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
+                }else{
+                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
+                }
             }
         }
         function enterToExplanation() {
-            document.getElementById("main-test").style.display = "none";
             document.getElementById("explanation").style.display = "block";
+            document.getElementById("main-test").style.display = "none";
         }
-
         function enterToTest() {
-            document.getElementById("explanation").style.display = "none";
+            document.getElementById("data-user").style.display = "none";
             document.getElementById("question-group").style.display = "block";
         }
-
-
-        function analysis() {
-            if (point > 40) {
-                window.location.href = "/first.html";
-            }
+        function user() {
+            document.getElementById("explanation").style.display = "none";
+            document.getElementById("data-user").style.display = "block";
         }
 
-        function happiness(){
-            window.location.href = "/happiness.html";
-        }
 
-        function main() {
-            window.location.href = "/main.html";
-        } 
-
-        function test(){
-            window.location.href = "/test.html";
-        }
-
-        function creator(){
-            window.location.href = "/creator.html";
-        }
-    
     </script>
 
 </body>

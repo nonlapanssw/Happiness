@@ -15,7 +15,10 @@
     font-weight: normal;
     font-style: normal;
 }html,body{
-    background-color:#273564;
+	background-color:#273564;
+	font-family:anakotmai;
+    margin:0;
+    padding:0;
 }
 #btn-header{
 	align-items: center;
