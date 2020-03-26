@@ -40,45 +40,55 @@
     </div>
     <div id="data-user">
         <p>กรุณาระบุรายละเอียดของคุณ ให้ครบด้วยค่ะ</p>
-        <label for="sex">เพศ :</label>
-        <select id="sex">
-            <option selected>กรุณาเลือก</option>
-            <option value="male">ชาย</option>
-            <option value="female">หญิง</option>
-        </select>
-        <br>
-        <label for="age">อายุ :</label>
-        <select id="age">
-            <option selected>กรุณาเลือก</option>
-            <option value="0-12">0-12 ปี</option>
-            <option value="13-19">13-19 ปี</option>
-            <option value="20-25">20-25 ปี</option>
-            <option value="26-39">26-39 ปี</option>
-            <option value="40-59">40-59 ปี</option>
-            <option value="60up">60 ปีขึ้นไป</option>
-        </select>
-        <br>
-        <label for="education">การศึกษา :</label>
-        <select id="education">
-            <option selected>กรุณาเลือก</option>
-            <option value="primary">ประถมศึกษา</option>
-            <option value="highschool">มัธยมศึกษา</option>
-            <option value="vocational">ปวช / ปวส / อนุปริญญา</option>
-            <option value="bachelor">ปริญญาตรี</option>
-            <option value="master-up">ปริญญาโท / เอก</option>
-        </select>
-        <br>
-        <label for="career">อาชีพ :</label>
-        <select id="education">
-            <option selected>กรุณาเลือก</option>
-            <option value="student">นักเรียน / นิสิต / นักศึกษา</option>
-            <option value="freelance">ค้าขาย / รับจ้าง / ธุรกิจส่วนตัว</option>
-            <option value="employee">พนักงานบริษัท / ห้างร้าน</option>
-            <option value="civil-service">รับราชการ / รัฐวิสาหกิจ</option>
-            <option value="house-worker">งานบ้าน</option>
-        </select>
-        <br>
-        <button onclick="enterToTest()">เริ่มทำการทดสอบ</button>
+        <div>
+            <label for="sex">เพศ :</label>
+            <select id="sex">
+                <option selected>กรุณาเลือก</option>
+                <option value="male">ชาย</option>
+                <option value="female">หญิง</option>
+            </select>
+            <br>
+            <label for="age">อายุ :</label>
+            <select id="age">
+                <option selected>กรุณาเลือก</option>
+                <option value="0-12">0-12 ปี</option>
+                <option value="13-19">13-19 ปี</option>
+                <option value="20-25">20-25 ปี</option>
+                <option value="26-39">26-39 ปี</option>
+                <option value="40-59">40-59 ปี</option>
+                <option value="60up">60 ปีขึ้นไป</option>
+            </select>
+            <br>
+            <label for="education">ระดับการศึกษา :</label>
+            <select id="education">
+                <option selected>กรุณาเลือก</option>
+                <option value="primary">ประถมศึกษา</option>
+                <option value="highschool">มัธยมศึกษา</option>
+                <option value="vocational">ปวช / ปวส / อนุปริญญา</option>
+                <option value="bachelor">ปริญญาตรี</option>
+                <option value="master-up">ปริญญาโท / เอก</option>
+            </select>
+            <br>
+            <label for="career">อาชีพ :</label>
+            <select id="career">
+                <option selected>กรุณาเลือก</option>
+                <option value="student">นักเรียน / นิสิต / นักศึกษา</option>
+                <option value="freelance">ค้าขาย / รับจ้าง / ธุรกิจส่วนตัว</option>
+                <option value="employee">พนักงานบริษัท / ห้างร้าน</option>
+                <option value="civil-service">รับราชการ / รัฐวิสาหกิจ</option>
+                <option value="house-worker">งานบ้าน</option>
+            </select>
+            <br>
+            <label for="marital-status">สถานภาพการสมรส :</label>
+            <select id="marital-status">
+                <option selected>กรุณาเลือก</option>
+                <option value="student">โสด</option>
+                <option value="freelance">คู่</option>
+                <option value="employee">พ่อหม้าย/แม่หม้าย</option>
+                <option value="civil-service">หย่าร้าง</option>
+            </select>
+            <button onclick="enterToTest()">เริ่มทำแบบทดสอบ</button>
+        </div>
     </div>
 
 
