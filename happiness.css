@@ -14,12 +14,13 @@
 	src: url('Anakotmai-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}html,body{
-	background-color:#273564;
+}
+body, html{
 	font-family:anakotmai;
     margin:0;
-	padding:0;
-	overflow-y: hidden;
+    padding:0;
+    background-color:#273564;
+    overflow-y: hidden;
 }
 #btn-header{
 	align-items: center;
@@ -37,27 +38,18 @@
 	cursor: pointer;
 	margin-right: 5%;
 }
-#creator{
-	margin-top: 3%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color:#FAF3EB;
-	width: 40%;
-	text-align: center;
-	padding-top:3%;
-	padding-bottom:5% ;
-	border-radius: 10%;
-	font-family: anakotmai;
+#btn-header button:hover{
+	transition-duration: 0.5s;
+	background-color:#FEB954;   
 }
-#creator p{
-	font-family: anakotmailight;
-	font-weight: bold;	
-	font-size: 22px;
-	margin: 0%;
+#btn-group{
+    margin-top: 10%;
+    margin-left: 2%;
 }
-#creator h2{
-	font-family: anakotmai;
-	font-weight: bold;	
-	font-size: 24px;
-	margin-bottom: 0%;
+#btn-group button{ 
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border:solid 1px #FAF3EB;
 }

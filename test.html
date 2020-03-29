@@ -94,19 +94,25 @@
 
     <div id="question-group">
         <div id="number-question">
-            <p>คำถามข้อที่ </p>
             <p id="number">1</p>
+            <p>.</p>
             <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
+            <form id="score" action="/action_page.php">
+                <input type="radio" name="score" onclick="collectScore(this.value)" value="4"> มากที่สุด
+                <input type="radio" name="score" onclick="collectScore(this.value)" value="3"> มาก
+                <input type="radio" name="score" onclick="collectScore(this.value)" value="2"> เล็กน้อย
+                <input type="radio" name="score" onclick="collectScore(this.value)" value="1"> ไม่เลย
+            </form>
         </div>
 
-        <div id="btn-group-point">
-            <button onclick="fourPoint()">มากที่สุด</button>
-            <button onclick="threePoint()">มาก</button>
-            <button onclick="twoPoint()">เล็กน้อย</button>
-            <button onclick="onePoint()">ไม่เลย</button>
+        <div id="page">
+            <button id="previous" onclick="previous()">ย้อนกลับ</button>
+            <button id="result" onclick="enterToResult()">สรุปผลคะแนน</button>
         </div>
+
+
     </div>
-    <div id="result">
+    <div id="result-score">
         <div class="videoWrapper">
             <iframe id="video" width="700" height="450" src="" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -142,8 +148,8 @@
 
     <script>
         var number = 1
-        var point = 0
-        var questions = ["ท่านรู้สึกสบายใจ",
+        var point = []
+        var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
             "ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน", "ท่านรู้สึกผิดหวังในตัวเอง",
             "ท่านรู้สึกว่าชีวิตของท่านมีแต่ความทุกข์", "ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)",
             "ท่านมั่นใจว่าสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงเกิดขึ้น", "ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต",
@@ -152,98 +158,29 @@
             "ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว", "หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี",
             "สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน"
         ]
-        function onePoint() {
-            point = point + 1
-            if (number < 15) {
-                document.getElementById("number").innerHTML = number + 1;
-                document.getElementById("question").innerHTML = questions[number - 1];
-                number++
-            } else if (number = 15) {
-                document.getElementById("number-question").style.display = "none";
-                document.getElementById("btn-group-point").style.display = "none";
-                document.getElementById("point").innerHTML = point;
-                document.getElementById("result").style.display = "block";
-                if (point < 44) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
-                } else if (point > 44 && point <= 50) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
-                } else {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
 
+        function collectScore(score) {
+            console.log(number)
+            document.getElementById("previous").style.display = 'block'
+            point[number - 1] = parseInt(score)
+            if (point[number - 1] !== undefined) {
+                if (number <= 14) {
+                    document.getElementById("number").innerHTML = number+1
+                    document.getElementById("question").innerHTML = questions[number]
+                    document.getElementById("score").reset();
+                    number++
+                } else if (number == 14) {
+                    document.getElementById("score").reset();
+                    document.getElementById("number").innerHTML = number+1
+                    document.getElementById("question").innerHTML = questions[number ]
                 }
+            }
+            if (point[14] != undefined) {
+                document.getElementById("result").style.display = 'block'
             }
         }
-        function twoPoint() {
-            point = point + 2
-            if (number < 15) {
-                document.getElementById("number").innerHTML = number + 1;
-                document.getElementById("question").innerHTML = questions[number - 1];
-                number++
-            } else if (number = 15) {
-                document.getElementById("number-question").style.display = "none";
-                document.getElementById("btn-group-point").style.display = "none";
-                document.getElementById("point").innerHTML = point;
-                document.getElementById("result").style.display = "block";
-                if (point < 44) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
-                } else if (point > 44 && point <= 50) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
-                } else {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
-                }
-            }
-        }
-        function threePoint() {
-            point = point + 3
-            if (number < 15) {
-                document.getElementById("number").innerHTML = number + 1;
-                document.getElementById("question").innerHTML = questions[number - 1];
-                number++
-            } else if (number = 15) {
-                document.getElementById("number-question").style.display = "none";
-                document.getElementById("btn-group-point").style.display = "none";
-                document.getElementById("point").innerHTML = point;
-                document.getElementById("result").style.display = "block";
-                if (point < 44) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
-                } else if (point > 44 && point <= 50) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
-                } else {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
-                }
-            }
-        }
-        function fourPoint() {
-            point = point + 4
-            if (number < 15) {
-                document.getElementById("number").innerHTML = number + 1;
-                document.getElementById("question").innerHTML = questions[number - 1];
-                number++
-            } else if (number = 15) {
-                document.getElementById("number-question").style.display = "none";
-                document.getElementById("btn-group-point").style.display = "none";
-                document.getElementById("point").innerHTML = point;
-                document.getElementById("result").style.display = "block";
-                if (point < 44) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/ToLd0aS6_-E?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
-                } else if (point > 44 && point <= 50) {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/LQiS2K1k4mg?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
-                } else {
-                    document.getElementById("video").src = "https://www.youtube.com/embed/irXZve4QRos?autoplay=1&controls=0";
-                    document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
-                }
-            }
+        function previous() {
+         
         }
         function enterToExplanation() {
             document.getElementById("explanation").style.display = "block";
@@ -257,7 +194,23 @@
             document.getElementById("explanation").style.display = "none";
             document.getElementById("data-user").style.display = "block";
         }
+        function enterToResult() {
+            var sum = 0
 
+            sum = point.reduce((a, b) => a + b, 0)
+            document.getElementById("question-group").style.display = 'none'
+            document.getElementById("result-score").style.display = 'block'
+            document.getElementById("point").innerHTML = sum
+            if (sum <= 43) {
+                document.getElementById("video").src = "https://www.youtube.com/embed/2U2DBjPJgI4?autoplay=1&controls=0";
+            } else if (sum >= 44 && sum <= 50) {
+                document.getElementById("video").src = "https://www.youtube.com/embed/dQaI3VkSCi0?autoplay=1&controls=0";
+            } else if (sum > 50) {
+                document.getElementById("video").src = "https://www.youtube.com/embed/UsaGgEjqNoE?autoplay=1&controls=0";
+            }
+
+
+        }
 
     </script>
 
