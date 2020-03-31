@@ -13,17 +13,100 @@
 </head>
 
 <body>
-    <div id="btn-group">
-        <button id="p1" style="background-color: #EC6665;"></button><br>
-        <button id="p2" ></button><br>
-        <button id="p3"></button><br>
-        <button id="p4"></button><br>
-        <button id="p5"></button><br>
-        <button id="p6"></button>
-    </div>
+    <form id="btn-group" action="/action_page.php">
+        <input type="radio" id="page1" name="page" onclick="changePage(this.value)" value="1" checked>
+        <label for="page1"></label><br><br>
+        <input type="radio" id="page2" name="page" onclick="changePage(this.value)" value="2">
+        <label for="page2"></label><br><br>
+        <input type="radio" id="page3" name="page" onclick="changePage(this.value)" value="3">
+        <label for="page3"></label><br><br>
+        <input type="radio" id="page4" name="page" onclick="changePage(this.value)" value="4">
+        <label for="page4"></label><br><br>
+        <input type="radio" id="page5" name="page" onclick="changePage(this.value)" value="5">
+        <label for="page5"></label><br><br>
+        <input type="radio" id="page6" name="page" onclick="changePage(this.value)" value="6">
+        <label for="page6"></label>
+    </form>
+    <div id="happiness">
 
+        <div id="P1-happiness">
+            <h1 style="color: #F65832;">ความสุข </h1>
+            <h1 style="color: #FAF3EB;">คืออะไร</h1>
+            <p style="color: #FAF3EB; font-size: 70px;margin-block-start: 0em;">The Happiness</p>
+        </div>
+        <div id="P2-happiness">
+            <p>ความหมายของความสุข</p>
+        </div>
+        <div id="P3-happiness">
+            <p>วิเคราะห์ความสุข</p>
+        </div>
+        <div id="P4-happiness">
+            <p>แนวทางการปฏิบัติตน</p>
+        </div>
+        <div id="P5-happiness">
+            <p>แนวทางการปฏิบัติตน(ต่อ)</p>
+        </div>
+        <div id="P6-happiness">
+            <p>ดัชนีชี้วัดความสุขคนไทย เป็นแบบประเมินความสุขด้วยตนเอง ซึ่งสร้างขึ้นภายใต้กรอบ
+                แนวคิดคำจำกัดความของความสุข
+                <br>หมายถึง สภาพชีวิตที่เป็นสุข อันเป็นผลจากการมีความสามารถในการจัดการปัญหาในการดำเนินชีวิต
+                <br>มีศักยภาพที่จะพัฒนาตนเองเพื่อคุณภาพชีวิตที่ดี โดยครอบ-คลุมถึงความดีงามภายในจิตใจ
+                <br>ภายใต้สภาพสังคมและสิ่งแวดล้อมที่เปลี่ยนแปลงไป</p>
+                <hr>
+            <p>ในการนำดัชนีชี้วัดสุขภาพจิตคนไทยไปใช้เพื่อประเมินซ้ำว่าตนเองมีระดับความสุข 
+                <br>เปลี่ยนแปลงไปจากเดิมหรือไม่ อย่างเร็วควรประเมินซ้ำอีก 1 เดือน
+                <br>หากต้องการผู้ให้คำปรึกษาโดยขอรับจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้
+                <br>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
+        </div>
+    </div>
     <script>
-        
+        function changePage(page) {
+            var page = parseInt(page)
+            if (page == 1) {
+                document.getElementById("P1-happiness").style.display = 'block'
+                document.getElementById("P2-happiness").style.display = 'none'
+                document.getElementById("P3-happiness").style.display = 'none'
+                document.getElementById("P4-happiness").style.display = 'none'
+                document.getElementById("P5-happiness").style.display = 'none'
+                document.getElementById("P6-happiness").style.display = 'none'
+            } else if (page == 2) {
+                document.getElementById("P2-happiness").style.display = 'block'
+                document.getElementById("P1-happiness").style.display = 'none'
+                document.getElementById("P3-happiness").style.display = 'none'
+                document.getElementById("P4-happiness").style.display = 'none'
+                document.getElementById("P5-happiness").style.display = 'none'
+                document.getElementById("P6-happiness").style.display = 'none'
+            } else if (page == 3) {
+                document.getElementById("P3-happiness").style.display = 'block'
+                document.getElementById("P1-happiness").style.display = 'none'
+                document.getElementById("P2-happiness").style.display = 'none'
+                document.getElementById("P4-happiness").style.display = 'none'
+                document.getElementById("P5-happiness").style.display = 'none'
+                document.getElementById("P6-happiness").style.display = 'none'
+            } else if (page == 4) {
+                document.getElementById("P4-happiness").style.display = 'block'
+                document.getElementById("P1-happiness").style.display = 'none'
+                document.getElementById("P2-happiness").style.display = 'none'
+                document.getElementById("P3-happiness").style.display = 'none'
+                document.getElementById("P5-happiness").style.display = 'none'
+                document.getElementById("P6-happiness").style.display = 'none'
+            } else if (page == 5) {
+                document.getElementById("P5-happiness").style.display = 'block'
+                document.getElementById("P1-happiness").style.display = 'none'
+                document.getElementById("P2-happiness").style.display = 'none'
+                document.getElementById("P4-happiness").style.display = 'none'
+                document.getElementById("P3-happiness").style.display = 'none'
+                document.getElementById("P6-happiness").style.display = 'none'
+            } else if (page == 6) {
+                document.getElementById("P6-happiness").style.display = 'block'
+                document.getElementById("P1-happiness").style.display = 'none'
+                document.getElementById("P2-happiness").style.display = 'none'
+                document.getElementById("P4-happiness").style.display = 'none'
+                document.getElementById("P5-happiness").style.display = 'none'
+                document.getElementById("P3-happiness").style.display = 'none'
+            }
+
+        }
     </script>
 
 </body>

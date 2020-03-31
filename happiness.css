@@ -19,13 +19,13 @@ body, html{
 	font-family:anakotmai;
     margin:0;
     padding:0;
-    background-color:#273564;
+    background-color:#FEB954;
     overflow-y: hidden;
 }
 #btn-header{
 	align-items: center;
 	text-align: center;
-	background-color: #273564;
+	background-color: #F65832;
 	padding: 1%;
 }
 #btn-header button{
@@ -40,16 +40,88 @@ body, html{
 }
 #btn-header button:hover{
 	transition-duration: 0.5s;
-	background-color:#FEB954;   
+	border-left: 5px solid; 
 }
 #btn-group{
+    float: left;
+    display: block;
     margin-top: 10%;
-    margin-left: 2%;
+    padding-bottom: 5%;
+    margin-left: 3%;
+    display: block;
 }
-#btn-group button{ 
-    border-radius: 30px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border:solid 1px #FAF3EB;
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    margin: 3%;
+    position: relative;
+    padding-left: 3%;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-flex;
+    color: #FAF3EB;
+}
+[type="radio"]:checked + label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #F65832;
+    border-radius: 100%;
+    background: #F65832;
+}
+[type="radio"]:not(:checked) + label::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 3px solid ;
+    border-radius: 100%;
+    background: none;
+}
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #FAF3EB;
+    border-radius: 100%;
+    background: none;
+}[type="radio"]:checked + label:hover,
+[type="radio"]:not(:checked) + label:hover {
+    color: #F65832;
+}
+#happiness{
+    margin-top: 10%;
+}
+#P1-happiness{
+    text-align: center; 
+}
+#P1-happiness h1{
+    font-size: 80px;
+    display: inline;
+}
+#P6-happiness{
+    text-align: center;
+    color: #FAF3EB;
+    font-size: 20px;
+}
+hr{
+    border: 1px solid #FAF3EB;
+    width: 30%;
+  }
+#P2-happiness,#P3-happiness,#P4-happiness,#P5-happiness,#P6-happiness{
+    display: none;
 }

@@ -91,27 +91,30 @@
         </div>
     </div>
 
-
-    <div id="question-group">
-        <div id="number-question">
-            <p id="number">1</p>
-            <p>.</p>
-            <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
+    <div id="question-frame">
+        <div id="question-group">
+            <div id="number-question">
+                <p id="number">1</p>
+                <p>.</p>
+                <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
+            </div>
             <form id="score" action="/action_page.php">
-                <input type="radio" name="score" onclick="collectScore(this.value)" value="4"> มากที่สุด
-                <input type="radio" name="score" onclick="collectScore(this.value)" value="3"> มาก
-                <input type="radio" name="score" onclick="collectScore(this.value)" value="2"> เล็กน้อย
-                <input type="radio" name="score" onclick="collectScore(this.value)" value="1"> ไม่เลย
+                <input type="radio" id="score4" name="score" onclick="collectScore(this.value)" value="4" checked>
+                <label for="score4">มากที่สุด</label>
+                <input type="radio" id="score3" name="score" onclick="collectScore(this.value)" value="3">
+                <label for="score3">มาก</label>
+                <input type="radio" id="score2" name="score" onclick="collectScore(this.value)" value="2">
+                <label for="score2">เล็กน้อย</label>
+                <input type="radio" id="score1" name="score" onclick="collectScore(this.value)" value="1">
+                <label for="score1">ไม่เลย</label>
             </form>
         </div>
-
         <div id="page">
             <button id="previous" onclick="previous()">ย้อนกลับ</button>
             <button id="result" onclick="enterToResult()">สรุปผลคะแนน</button>
         </div>
-
-
     </div>
+
     <div id="result-score">
         <div class="videoWrapper">
             <iframe id="video" width="700" height="450" src="" frameborder="0"
@@ -160,19 +163,18 @@
         ]
 
         function collectScore(score) {
-            console.log(number)
             document.getElementById("previous").style.display = 'block'
             point[number - 1] = parseInt(score)
             if (point[number - 1] !== undefined) {
                 if (number <= 14) {
-                    document.getElementById("number").innerHTML = number+1
+                    document.getElementById("number").innerHTML = number + 1
                     document.getElementById("question").innerHTML = questions[number]
                     document.getElementById("score").reset();
                     number++
                 } else if (number == 14) {
                     document.getElementById("score").reset();
-                    document.getElementById("number").innerHTML = number+1
-                    document.getElementById("question").innerHTML = questions[number ]
+                    document.getElementById("number").innerHTML = number + 1
+                    document.getElementById("question").innerHTML = questions[number]
                 }
             }
             if (point[14] != undefined) {
@@ -180,7 +182,18 @@
             }
         }
         function previous() {
-         
+            console.log(number)
+            if (number > 1) {
+                number--
+                document.getElementById("number").innerHTML = number
+                document.getElementById("question").innerHTML = questions[number - 1]
+                document.getElementById("result").style.display = 'none'
+                if (number == 1) {
+                    document.getElementById("previous").style.display = 'none'
+                    document.getElementById("result").style.display = 'none'
+                }
+            }
+
         }
         function enterToExplanation() {
             document.getElementById("explanation").style.display = "block";
@@ -188,7 +201,7 @@
         }
         function enterToTest() {
             document.getElementById("data-user").style.display = "none";
-            document.getElementById("question-group").style.display = "block";
+            document.getElementById("question-frame").style.display = "block";
         }
         function user() {
             document.getElementById("explanation").style.display = "none";
@@ -196,17 +209,19 @@
         }
         function enterToResult() {
             var sum = 0
-
             sum = point.reduce((a, b) => a + b, 0)
-            document.getElementById("question-group").style.display = 'none'
-            document.getElementById("result-score").style.display = 'block'
+            document.getElementById("question-frame").style.display = 'none'
+            document.getElementById("result-score").style.display = 'block';
             document.getElementById("point").innerHTML = sum
             if (sum <= 43) {
                 document.getElementById("video").src = "https://www.youtube.com/embed/2U2DBjPJgI4?autoplay=1&controls=0";
+                document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
             } else if (sum >= 44 && sum <= 50) {
                 document.getElementById("video").src = "https://www.youtube.com/embed/dQaI3VkSCi0?autoplay=1&controls=0";
+                document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
             } else if (sum > 50) {
                 document.getElementById("video").src = "https://www.youtube.com/embed/UsaGgEjqNoE?autoplay=1&controls=0";
+                document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
             }
 
 
