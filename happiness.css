@@ -114,8 +114,9 @@ body, html{
     display: inline;
 }
 #P6-happiness{
+    font-family:anakotmailight;
     text-align: center;
-    color: #FAF3EB;
+    color: #000000;
     font-size: 20px;
 }
 hr{
