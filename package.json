@@ -16,7 +16,5 @@
     "url": "https://github.com/nonlapanssw/Happiness/issues"
   },
   "homepage": "https://github.com/nonlapanssw/Happiness#readme",
-  "dependencies": {
-    "firebase": "^7.13.1"
-  }
+  "dependencies": {}
 }

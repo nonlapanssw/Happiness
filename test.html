@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="/test.css">
     <div id="btn-header">
@@ -88,6 +87,7 @@
                 <option value="divorce">หย่าร้าง</option>
             </select>
             <button onclick="enterToTest()">เริ่มทำแบบทดสอบ</button>
+            <p id=fill-up style="color: red; font-size: 18px; margin-left: 0;text-align: center;">กรุณากรอกให้ครบค่ะ</p>
         </div>
     </div>
 
@@ -148,27 +148,22 @@
             <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
         </span>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
     <script>
-        var data = { sex: "", age: "", education: "", career: "", status: "", date: "" };
-        var number = 1
-        var point = []
-        var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
-            "ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน", "ท่านรู้สึกผิดหวังในตัวเอง",
-            "ท่านรู้สึกว่าชีวิตของท่านมีแต่ความทุกข์", "ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)",
-            "ท่านมั่นใจว่าสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงเกิดขึ้น", "ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต",
-            "ท่านรู้สึกเห็นใจเมื่อผู้อื่นมีทุกข์", "ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา",
-            "ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส", "ท่านรู้สึกภูมิใจในตนเอง",
-            "ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว", "หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี",
-            "สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน"
-        ]
-        var firebase = require("firebase");
-        firebase.initializeApp({
-            serviceAccount: "./subjective-well-being-firebase-adminsdk-m24hg-c8de6dddcb.json",
-            databaseURL: "https://subjective-well-being.firebaseio.com"
-        });
-
+        var firebaseConfig = {
+            apiKey: "AIzaSyD1ark3iF8WazBagupGswZWGRzsrdoJ5MM",
+            authDomain: "subjective-well-being.firebaseapp.com",
+            databaseURL: "https://subjective-well-being.firebaseio.com",
+            projectId: "subjective-well-being",
+            storageBucket: "subjective-well-being.appspot.com",
+            messagingSenderId: "445003882411",
+            appId: "1:445003882411:web:492df3948c8fbe488dfcee",
+            measurementId: "G-MW0CJSMJJV"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
         function sex(value) {
             data.sex = value
         }
@@ -184,15 +179,31 @@
         function status(value) {
             data.status = value
         }
+    </script>
+    <script>
+        var data = { sex: "", age: "", education: "", career: "", status: "" };
+        var number = 1
+        var point = []
+        var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
+            "ท่านรู้สึกเบื่อหน่ายท้อแท้กับการดำเนินชีวิตประจำวัน", "ท่านรู้สึกผิดหวังในตัวเอง",
+            "ท่านรู้สึกว่าชีวิตของท่านมีแต่ความทุกข์", "ท่านสามารถทำใจยอมรับได้สำหรับปัญหาที่ยากจะแก้ไข (เมื่อมีปัญหา)",
+            "ท่านมั่นใจว่าสามารถควบคุมอารมณ์ได้เมื่อมีเหตุการณ์คับขันหรือร้ายแรงเกิดขึ้น", "ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต",
+            "ท่านรู้สึกเห็นใจเมื่อผู้อื่นมีทุกข์", "ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา",
+            "ท่านให้ความช่วยเหลือแก่ผู้อื่นเมื่อมีโอกาส", "ท่านรู้สึกภูมิใจในตนเอง",
+            "ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว", "หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี",
+            "สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน"
+        ]
+
         function enterToTest() {
-            document.getElementById("data-user").style.display = "none";
-            document.getElementById("question-frame").style.display = "block";
-            data.date = Date.now();
-            
-            var ref = firebase.database().ref('user');
-            ref.push({
-                'text': 'ddd'
-            });
+            if (data.age == "" || data.career == "" || data.education == "" ||
+                data.sex == "" || data.status == "") {
+                document.getElementById("fill-up").style.display = "block";
+            } else {
+                //var firebaseRef = firebase.database().ref("User");
+                //firebaseRef.child(Date.now()).set(data)
+                document.getElementById("data-user").style.display = "none";
+                document.getElementById("question-frame").style.display = "block";
+            }
         }
 
 
