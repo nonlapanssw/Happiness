@@ -42,14 +42,14 @@
         <p>กรุณาระบุรายละเอียดของคุณ ให้ครบด้วยค่ะ</p>
         <div>
             <label for="sex">เพศ :</label>
-            <select id="sex">
+            <select id="sex" onclick="sex(this.value)">
                 <option selected>กรุณาเลือก</option>
                 <option value="male">ชาย</option>
                 <option value="female">หญิง</option>
             </select>
             <br>
             <label for="age">อายุ :</label>
-            <select id="age">
+            <select id="age" onclick="age(this.value)">
                 <option selected>กรุณาเลือก</option>
                 <option value="0-12">0-12 ปี</option>
                 <option value="13-19">13-19 ปี</option>
@@ -60,7 +60,7 @@
             </select>
             <br>
             <label for="education">ระดับการศึกษา :</label>
-            <select id="education">
+            <select id="education" onclick="education(this.value)">
                 <option selected>กรุณาเลือก</option>
                 <option value="primary">ประถมศึกษา</option>
                 <option value="highschool">มัธยมศึกษา</option>
@@ -70,7 +70,7 @@
             </select>
             <br>
             <label for="career">อาชีพ :</label>
-            <select id="career">
+            <select id="career" onclick="career(this.value)">
                 <option selected>กรุณาเลือก</option>
                 <option value="student">นักเรียน / นิสิต / นักศึกษา</option>
                 <option value="freelance">ค้าขาย / รับจ้าง / ธุรกิจส่วนตัว</option>
@@ -80,12 +80,12 @@
             </select>
             <br>
             <label for="marital-status">สถานภาพการสมรส :</label>
-            <select id="marital-status">
+            <select id="marital-status" onclick="status(this.value)">
                 <option selected>กรุณาเลือก</option>
-                <option value="student">โสด</option>
-                <option value="freelance">คู่</option>
-                <option value="employee">พ่อหม้าย/แม่หม้าย</option>
-                <option value="civil-service">หย่าร้าง</option>
+                <option value="single">โสด</option>
+                <option value="married">คู่</option>
+                <option value="widow">พ่อหม้าย/แม่หม้าย</option>
+                <option value="divorce">หย่าร้าง</option>
             </select>
             <button onclick="enterToTest()">เริ่มทำแบบทดสอบ</button>
         </div>
@@ -148,8 +148,10 @@
             <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
         </span>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 
     <script>
+        var data = { sex: "", age: "", education: "", career: "", status: "", date: "" };
         var number = 1
         var point = []
         var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
@@ -161,10 +163,56 @@
             "ท่านรู้สึกมั่นคง ปลอดภัยเมื่ออยู่ในครอบครัว", "หากท่านป่วยหนัก ท่านเชื่อว่าครอบครัวจะดูแลท่านเป็นอย่างดี",
             "สมาชิกในครอบครัวมีความรักและผูกพันต่อกัน"
         ]
+        var firebase = require("firebase");
+        firebase.initializeApp({
+            serviceAccount: "./subjective-well-being-firebase-adminsdk-m24hg-c8de6dddcb.json",
+            databaseURL: "https://subjective-well-being.firebaseio.com"
+        });
+
+        function sex(value) {
+            data.sex = value
+        }
+        function age(value) {
+            data.age = value
+        }
+        function education(value) {
+            data.education = value
+        }
+        function career(value) {
+            data.career = value
+        }
+        function status(value) {
+            data.status = value
+        }
+        function enterToTest() {
+            document.getElementById("data-user").style.display = "none";
+            document.getElementById("question-frame").style.display = "block";
+            data.date = Date.now();
+            
+            var ref = firebase.database().ref('user');
+            ref.push({
+                'text': 'ddd'
+            });
+        }
+
+
 
         function collectScore(score) {
             document.getElementById("previous").style.display = 'block'
-            point[number - 1] = parseInt(score)
+            if (number == 3 || number == 4 || number == 5) {
+                if (parseInt(score) == 4) {
+                    point[number - 1] = 1
+                } else if (parseInt(score) == 3) {
+                    point[number - 1] = 2
+                } else if (parseInt(score) == 2) {
+                    point[number - 1] = 3
+                } else if (parseInt(score) == 1) {
+                    point[number - 1] = 4
+                }
+            } else {
+                point[number - 1] = parseInt(score)
+            }
+            console.log(point)
             if (point[number - 1] !== undefined) {
                 if (number <= 14) {
                     document.getElementById("number").innerHTML = number + 1
@@ -199,10 +247,7 @@
             document.getElementById("explanation").style.display = "block";
             document.getElementById("main-test").style.display = "none";
         }
-        function enterToTest() {
-            document.getElementById("data-user").style.display = "none";
-            document.getElementById("question-frame").style.display = "block";
-        }
+
         function user() {
             document.getElementById("explanation").style.display = "none";
             document.getElementById("data-user").style.display = "block";
@@ -226,6 +271,7 @@
 
 
         }
+
 
     </script>
 
