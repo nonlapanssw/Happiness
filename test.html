@@ -15,9 +15,9 @@
         <img></img>
         <h2>แบบทดสอบ</h2>
         <h2>ดัชนีชี้วัดความสุขคนไทยฉบับสั้น</h2>
-        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่าน</p>
-        <p>มากที่สุด และขอความร่วมมือตอบคำถามทุกข้อ</p>
-        <p>ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
+        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่าน
+        มากที่สุด และขอความร่วมมือตอบคำถามทุกข้อ
+        ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
         <button onclick="enterToExplanation()">เข้าสู่ทำแบบทดสอบ</button>
     </div>
 
@@ -25,8 +25,8 @@
         <h1>คำชี้แจง :</h1>
         <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับตัวท่านมากที่สุดและขอความร่วมมือตอบคำถามทุกข้อ</p>
         <p>คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่านในช่วง 1
-            เดือนที่ผ่านมาจนถึงปัจจุบันให้ท่านสำรวจตัวท่านเองและประเมินเหตุการณ์ </p>
-        <p>อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใดโดยคำตอบจะมี 4 ตัวเลือก คือ</p>
+            เดือนที่ผ่านมาจนถึงปัจจุบันให้ท่านสำรวจตัวท่านเองและประเมินเหตุการณ์ 
+        อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใดโดยคำตอบจะมี 4 ตัวเลือก คือ</p>
 
         <li>- มากที่สุด หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด หรือเห็นด้วย กับเรื่องนั้น ๆ
             มากที่สุด</li>
@@ -100,13 +100,13 @@
             </div>
             <form id="score" action="/action_page.php">
                 <input type="radio" id="score4" name="score" onclick="collectScore(this.value)" value="4" checked>
-                <label for="score4">มากที่สุด</label>
+                <label for="score4">มากที่สุด</label><br>
                 <input type="radio" id="score3" name="score" onclick="collectScore(this.value)" value="3">
-                <label for="score3">มาก</label>
+                <label for="score3">มาก</label><br>
                 <input type="radio" id="score2" name="score" onclick="collectScore(this.value)" value="2">
-                <label for="score2">เล็กน้อย</label>
+                <label for="score2">เล็กน้อย</label><br>
                 <input type="radio" id="score1" name="score" onclick="collectScore(this.value)" value="1">
-                <label for="score1">ไม่เลย</label>
+                <label for="score1">ไม่เลย</label><br>
             </form>
         </div>
         <div id="page">
@@ -195,14 +195,16 @@
         ]
 
         function enterToTest() {
+            document.getElementById("data-user").style.display = "none";
+                document.getElementById("question-frame").style.display = "block";
             if (data.age == "" || data.career == "" || data.education == "" ||
                 data.sex == "" || data.status == "") {
                 document.getElementById("fill-up").style.display = "block";
             } else {
                 //var firebaseRef = firebase.database().ref("User");
                 //firebaseRef.child(Date.now()).set(data)
-                document.getElementById("data-user").style.display = "none";
-                document.getElementById("question-frame").style.display = "block";
+               // document.getElementById("data-user").style.display = "none";
+                //document.getElementById("question-frame").style.display = "block";
             }
         }
 

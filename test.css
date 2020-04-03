@@ -46,13 +46,15 @@ body, html{
 #main-test{
     font-size: 22px;
     float: right;
-    text-align: right;
     line-height: 1;
+    text-align: right;
     margin-right: 15%;
-    margin-top: 5%;    
+    margin-top: 5%;  
+    width: 43%;  
 }
 #main-test p{
     font-family:anakotmailight;
+    line-height: 2;
 }
 #main-test button{
     font-family:anakotmai;
@@ -62,7 +64,41 @@ body, html{
     background: none;
     cursor: pointer;
 }
-#data-user div{
+
+#explanation{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    color:#188AB6;
+    width: 80%;
+    list-style-type:none;
+}
+#explanation p,#explanation h1{
+    text-align: center;
+}
+#explanation p{
+    font-size: 20px;
+}
+#explanation li{
+    margin-left: 5%;
+    padding-top: 1%;
+    font-size: 18px;
+}
+#explanation button{
+    margin-top: 2%;
+    font-family:anakotmai;
+    background-color: #188AB6;
+    color: #F65832;
+    border: none;
+    float: right;
+    font-size: 30px;
+    padding: 0% 5% 0% 5%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#explanation button:hover{
+    transition-duration: 4s;
+}#data-user div{
     color: #FAF3EB;
     background-color: #188AB6;
     width: 50%;
@@ -118,6 +154,8 @@ body, html{
 }
 #question-group{
     padding-top: 5%;
+}#question-group br{
+    display: none;
 }
 #number-question{
     background-color: white;
@@ -218,40 +256,6 @@ body, html{
     border-bottom-left-radius: 20px;
     cursor: pointer;
 }
-#explanation{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6%;
-    color:#188AB6;
-    width: 80%;
-    list-style-type:none;
-}
-#explanation p,#explanation h1{
-    text-align: center;
-}
-#explanation p{
-    font-size: 20px;
-}
-#explanation li{
-    margin-left: 5%;
-    padding-top: 1%;
-    font-size: 18px;
-}
-#explanation button{
-    margin-top: 2%;
-    font-family:anakotmai;
-    background-color: #188AB6;
-    color: #F65832;
-    border: none;
-    float: right;
-    font-size: 30px;
-    padding: 0% 5% 0% 5%;
-    cursor: pointer;
-    border-radius: 10px;
-}
-#explanation button:hover{
-    transition-duration: 4s;
-}
 #result-score span{
     float: right;
     text-align: center;
@@ -309,7 +313,7 @@ body, html{
 }
 @media screen and (max-width: 1000px) {
     #main-test{
-        font-size: 24px;
+        font-size: 28px;
         text-align: center;
         line-height: 1;
         margin-top: 5%;   
@@ -317,15 +321,179 @@ body, html{
     }
     #main-test p{
         font-family:anakotmailight;
-        font-size: 18px;
+        font-size: 26px;
+        line-height: 1.5;
     }
     #main-test button{
-        margin-top: 5%;
-        font-family:anakotmai;
+        margin-top: 25%;
+        font-family:anakotmaibold;
         color: #F65832;
-        font-size: 24px;
+        font-size: 40px;
         text-shadow: black;
         background: none;
         cursor: pointer;
+    }#explanation{
+        font-family:anakotmailight;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6%;
+        color:#188AB6;
+        padding: 8%;
+        list-style-type:none;
+        font-size: 14px;
+        text-align: center;
+    }
+    #explanation li{
+        margin-left: 5%;
+        padding-top: 1%;
+        font-size: 12px;
+        text-align: left;
+    }
+    #explanation button{
+        margin-top: 10%;
+        font-family:anakotmai;
+        background-color: #188AB6;
+        color: #F65832;
+        border: none;
+        font-size: 50px;
+        padding: 0% 5% 0% 5%;
+        border-radius: 10px;
+        width: 50%;
+    }
+    #data-user{
+        margin-top: 5%;
+    }
+    #data-user div{
+        color: #FAF3EB;
+        background-color: #188AB6;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3%;
+        font-family: anakotmai;
+        font-size: 30px;
+        border-radius: 10px;
+        line-height: 4;
+    }
+    #data-user p{
+        font-size: 30px;
+        color: #188AB6;
+        margin-bottom: 1%;
+        margin-left: 10%;
+    }
+    #data-user label{
+        margin-left: 1%;
+    }
+    #data-user select{
+        font-family: anakotmailight;
+        margin-top: 5%;
+        font-size: 18px;
+        width: 50%;
+        float: right;
+        margin-right: 10%;
+        color: #188AB6;
+        padding: 1% 9% 1% 9%;
+        border-radius:10px;
+        background-color: #FAF3EB;
+    }
+    #data-user button{
+        font-family: anakotmai;
+        font-size: 40px;
+        background-color: #F65832;
+        color: #272822;
+        border-radius:10px;
+        border: none;
+        padding: 1% 5% 1% 5%;
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+    #number-question{
+        background-color: white;
+        padding: 2% 4% 2% 4%;
+        border-radius: 50px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-top: 15%;
+    }
+    #number-question p{
+        display: inline;
+        color: #F65832;
+        font-size: 50px;
+    }
+    #score{
+        position: fixed;
+        left: 40%;
+        top: 30%;
+        width: 90%;
+        position: fixed;
+        font-size: 45px;
+        color: #FAF3EB;
+        line-height: 4;
+    }
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+    }
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label
+    {
+        position: relative;
+        padding-left: 3%;
+        line-height: 20px;
+        display: inline-flex;
+        color: #FAF3EB;
+    }
+    [type="radio"]:checked + label::after,
+    [type="radio"]:not(:checked) + label::after
+    {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 3px solid ;
+        border-radius: 100%;
+        background: #F65832;
+    }
+    [type="radio"]:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 3px solid #FAF3EB;
+        border-radius: 100%;
+        background: none;
+    }[type="radio"]:checked + label:hover,
+    [type="radio"]:not(:checked) + label:hover {
+        color: #F65832;
+    }
+    #page{
+        position: relative;
+        padding: 10%;
+        margin-top: 80%;
+    }
+    #previous{
+        font-size: 40px;
+        float: left;
+        font-family: anakotmai;
+        color:#188AB6;
+        padding:4%;
+        background-color: #FAF3EB;
+        border: none;
+    }
+    #result{
+        float: right;
+        display: none;
+        font-family: anakotmai;
+        font-size: 40px;
+        background-color:#188AB6;
+        padding:4%;
+        color: #FAF3EB;
+        border: none;
     }
 }
