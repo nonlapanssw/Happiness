@@ -3,13 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="/happiness.css">
-    <div id="btn-header">
-        <button onclick="location.href='/main.html';">ภาพยนตร์สารคดีสั้น</button>
-        <button onclick="location.href='/test.html';">แบบทดสอบความสุข</button>
-        <button onclick="location.href='/happiness.html';">เกี่ยวกับความสุข</button>
-        <button onclick="location.href='/creator.html';">ผู้จัดทำ</button>
-    </div>
-
+    <div id="header"></div>
 </head>
 
 <body>
@@ -27,24 +21,57 @@
         <input type="radio" id="page6" name="page" onclick="changePage(this.value)" value="6">
         <label for="page6"></label>
     </form>
-    <div id="happiness">
-
+    <div id="happiness" style="height: 100%; margin: 0;">
         <div id="P1-happiness">
-            <h1 style="color: #F65832;">ความสุข </h1>
-            <h1 style="color: #FAF3EB;">คืออะไร</h1>
-            <p style="color: #FAF3EB; font-size: 70px;margin-block-start: 0em;">The Happiness</p>
+            <h1 style="color: #FDC848;">ความสุข </h1>
+            <h1 style="color: #00698D;">คืออะไร</h1>
+            <p style="color: #00698D; font-size: 70px;margin-block-start: 0em;">The <span
+                    style="color: #FDC848;">Happiness</span></p>
         </div>
         <div id="P2-happiness">
             <p>ความหมายของความสุข</p>
+            <hr>
+            <div class="video-P2">
+                <iframe id="video-2" height="450" width="700" src="" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </div>
         <div id="P3-happiness">
             <p>วิเคราะห์ความสุข</p>
+            <p>ตามหลัก Bio - Psycho - Social Model</p>
+            <hr>
+            <div class="video-P3">
+                <iframe id="video-3" height="400" width="650" src="" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </div>
         <div id="P4-happiness">
-            <p>แนวทางการปฏิบัติตน</p>
+            <div id="P4-happiness-1">
+                <p>แนวทางการปฏิบัติตน</p>
+                <p>&nbsp; 1.</p>
+                <p>&nbsp; 2.</p>
+                <p>&nbsp; 3.</p>
+                <p>&nbsp; 4.</p>
+                <p>&nbsp; 5.</p>
+            </div>
+            <div id="P4-happiness-2">
+                kkkkjk
+            </div>
         </div>
         <div id="P5-happiness">
-            <p>แนวทางการปฏิบัติตน(ต่อ)</p>
+            <div id="P5-happiness-1">
+                kkkkjk
+            </div>
+            <div id="P5-happiness-2">
+                <p>แนวทางการปฏิบัติตน (ต่อ)</p>
+                <p>&nbsp;6.</p>
+                <p>&nbsp;7.</p>
+                <p>&nbsp;8.</p>
+                <p>&nbsp;9.</p>
+                <p>&nbsp;10.</p>
+            </div>
         </div>
         <div id="P6-happiness">
             <p>ดัชนีชี้วัดความสุขคนไทย เป็นแบบประเมินความสุขด้วยตนเอง ซึ่งสร้างขึ้นภายใต้กรอบ
@@ -52,8 +79,8 @@
                 <br>หมายถึง สภาพชีวิตที่เป็นสุข อันเป็นผลจากการมีความสามารถในการจัดการปัญหาในการดำเนินชีวิต
                 <br>มีศักยภาพที่จะพัฒนาตนเองเพื่อคุณภาพชีวิตที่ดี โดยครอบ-คลุมถึงความดีงามภายในจิตใจ
                 <br>ภายใต้สภาพสังคมและสิ่งแวดล้อมที่เปลี่ยนแปลงไป</p>
-                <hr>
-            <p>ในการนำดัชนีชี้วัดสุขภาพจิตคนไทยไปใช้เพื่อประเมินซ้ำว่าตนเองมีระดับความสุข 
+            <br>
+            <p>ในการนำดัชนีชี้วัดสุขภาพจิตคนไทยไปใช้เพื่อประเมินซ้ำว่าตนเองมีระดับความสุข
                 <br>เปลี่ยนแปลงไปจากเดิมหรือไม่ อย่างเร็วควรประเมินซ้ำอีก 1 เดือน
                 <br>หากต้องการผู้ให้คำปรึกษาโดยขอรับจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้
                 <br>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
@@ -76,6 +103,7 @@
                 document.getElementById("P4-happiness").style.display = 'none'
                 document.getElementById("P5-happiness").style.display = 'none'
                 document.getElementById("P6-happiness").style.display = 'none'
+                document.getElementById("video-2").src="https://www.youtube.com/embed/2U2DBjPJgI4?autoplay=1&controls=0"
             } else if (page == 3) {
                 document.getElementById("P3-happiness").style.display = 'block'
                 document.getElementById("P1-happiness").style.display = 'none'
@@ -83,6 +111,7 @@
                 document.getElementById("P4-happiness").style.display = 'none'
                 document.getElementById("P5-happiness").style.display = 'none'
                 document.getElementById("P6-happiness").style.display = 'none'
+                document.getElementById("video-3").src="https://www.youtube.com/embed/2U2DBjPJgI4?autoplay=1&controls=0"
             } else if (page == 4) {
                 document.getElementById("P4-happiness").style.display = 'block'
                 document.getElementById("P1-happiness").style.display = 'none'
@@ -108,7 +137,12 @@
 
         }
     </script>
-
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+        });
+    </script>
 </body>
 
 </html>

@@ -19,41 +19,24 @@ body, html{
 	font-family:anakotmai;
     margin:0;
     padding:0;
-    background-color:#FEB954;
+    height: 100%;
+    background-color:#FAF3EB;
     overflow-y: hidden;
 }
-#btn-header{
-	align-items: center;
-	text-align: center;
-	background-color: #F65832;
-	padding: 1%;
-}
-#btn-header button{
-	color:#FAF3EB;
-	font-size: 18px;
-	border: none;
-	background: none;
-	font-family:anakotmai;
-	font-weight: normal;
-	cursor: pointer;
-	margin-right: 5%;
-}
-#btn-header button:hover{
-	transition-duration: 0.5s;
-	border-left: 5px solid; 
-}
 #btn-group{
+    position: absolute;
+    padding-left: 3%;
     float: left;
     display: block;
     margin-top: 10%;
     padding-bottom: 5%;
-    margin-left: 3%;
     display: block;
 }
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px;
+    margin-left: 3%;
 }
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label
@@ -64,7 +47,7 @@ body, html{
     cursor: pointer;
     line-height: 20px;
     display: inline-flex;
-    color: #FAF3EB;
+    color: #F65832;
 }
 [type="radio"]:checked + label::after{
     content: '';
@@ -103,26 +86,86 @@ body, html{
 [type="radio"]:not(:checked) + label:hover {
     color: #F65832;
 }
-#happiness{
-    margin-top: 10%;
-}
 #P1-happiness{
     text-align: center; 
+    margin-top: 13%;
 }
 #P1-happiness h1{
     font-size: 80px;
     display: inline;
+}#P2-happiness,#P3-happiness{
+    font-family: anakotmaibold;
+    text-align: center;
+    font-size: 40px;
+    color: #FDC848;
+    line-height: 0.3;
+}
+#P4-happiness{
+    margin: 0;
+    padding: 0;
+}
+#P4-happiness-1{
+    position: static;
+    left: 0;
+    float: left;
+    background-color: #F65832;
+    width: 50%;
+    color: #00698D;
+    font-size: 30px;
+}
+#P4-happiness-2{
+    position: static;
+    bottom: 0;
+    width: 50%;
+    float:right;
+    background-color: #00698D;
+    color: #F65832;
+}#P4-happiness-1 p{
+    padding-left: 20%;
+}
+#P5-happiness{
+    margin: 0;
+    padding: 0;
+}
+#P5-happiness-1{
+    position: static;
+    left: 0;
+    float: left;
+    background-color: #00698D;
+    width: 50%;
+}
+#P5-happiness-2{
+    position: static;
+    bottom: 0;
+    width: 50%;
+    float:right;
+    background-color: #F65832;
+    font-size: 30px;
+    color: #00698D;
+}#P5-happiness-2 p{
+    padding-left: 3%;
 }
 #P6-happiness{
-    font-family:anakotmailight;
+    margin-top: 13%;
+    font-family:anakotmai;
     text-align: center;
-    color: #000000;
+    color: #00698D;
     font-size: 20px;
 }
 hr{
-    border: 1px solid #FAF3EB;
-    width: 30%;
+    border: 0.5px solid #F65832;
+    width: 20%;
   }
 #P2-happiness,#P3-happiness,#P4-happiness,#P5-happiness,#P6-happiness{
     display: none;
+}.video-P2 {
+    padding-bottom: 45%; /* 16:9 */
+    margin-left: 45%;
+    height:50%;
+    width: 50%;
+}.video-P3{
+    padding-bottom: 45%; /* 16:9 */
+    margin-left: 8%;
+    height:50%;
+    width: 50%;
 }

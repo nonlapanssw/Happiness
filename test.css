@@ -19,97 +19,65 @@ body, html{
 	font-family:anakotmai;
     margin:0;
     padding:0;
-    background-color:#F7AB37;
+    background-color:#FDC848;
     overflow-y: hidden;
 }
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  .topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .active {
-    background-color: #F65832;
-    color: white;
-  }
-  #question-frame,#result-score,#explanation,#data-user,#previous,#fill-up,#data-user label br{
+#question-frame,#result-score,#explanation,#data-user,#previous,#fill-up,#data-user label br{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
-#btn-header{
-	align-items: center;
-	text-align: center;
-	background-color: #F65832;
-	padding: 1%;
-}
-#btn-header button{
-	color:#FAF3EB;
-	font-size: 18px;
-	border: none;
-	background: none;
-	font-family:anakotmai;
-	font-weight: normal;
-	cursor: pointer;
-	margin-right: 5%;
-}
-#btn-header button:hover{
-	transition-duration: 0.5s;
-	border-left: 5px solid; 
-}
 #main-test{
-    font-size: 22px;
-    float: right;
-    line-height: 1;
+    position: absolute;
+    border: solid 0.5px white; 
+    margin-top: 3%;
+    margin-left: 5%;
+    border-radius: 10px; 
+    padding-bottom: 10%;
+    height: 60%;
+    width: 90%;
     text-align: right;
-    margin-right: 15%;
-    margin-top: 5%;  
-    width: 43%;  
+    color: #00698D;
+}
+#main-test h1,#main-test h2{
+    font-family: anakotmai;
+    padding-right: 5%;
 }
 #main-test p{
     font-family:anakotmailight;
+    padding-right: 5%; 
     line-height: 2;
+    font-size: 20px;
+}#main-test h1{
+    font-size: 40px;
+}#main-test h2{
+    font-size: 30px;
 }
 #main-test button{
+    margin-right: 5%;
     font-family:anakotmai;
     color: #F65832;
     font-size: 30px;
-    text-shadow: black;
+    border: white 0.5px solid;
     background: none;
+    border-radius: 4px;
     cursor: pointer;
+    padding: 1% 1%;
+    position: relative;
+}
+#main-test button:hover{
+    transition-duration: 0.5s;
+    opacity: 0.5;
 }
 
 #explanation{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6%;
-    color:#188AB6;
-    width: 80%;
-    list-style-type:none;
+    position: absolute;
+    border: solid 0.5px white; 
+    margin:2%;
+    border-radius: 10px; 
+    padding: 3%;
+    height: 70%;
+    width: 90%;
+    color: #00698D;
 }
 #explanation p,#explanation h1{
     text-align: center;
@@ -117,32 +85,36 @@ body, html{
 #explanation p{
     font-size: 20px;
 }
+#explanation span{
+    color: #F65832;
+}
 #explanation li{
-    margin-left: 5%;
-    padding-top: 1%;
+    margin-left: 15%;
+    padding: 1%;
     font-size: 18px;
+    list-style-type:none;
 }
 #explanation button{
-    margin-top: 2%;
+    float: right;
     font-family:anakotmai;
-    background-color: #188AB6;
+    background-color: #00698D;
     color: #F65832;
     border: none;
-    float: right;
     font-size: 30px;
-    padding: 0% 5% 0% 5%;
+    padding: 0% 5%;
     cursor: pointer;
     border-radius: 10px;
 }
 #explanation button:hover{
-    transition-duration: 4s;
+    transition-duration: 0.5s;
+    opacity: 0.5;
 }#data-user div{
     color: #FAF3EB;
-    background-color: #188AB6;
+    background-color: #00698D;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    padding: 3%;
+    padding: 3% 8%;
     line-height: 2;
     font-family: anakotmai;
     font-size: 30px;
@@ -151,7 +123,7 @@ body, html{
 #data-user p{
     font-family: anakotmaibold;
     font-size: 30px;
-    color: #188AB6;
+    color: #00698D;
     margin-bottom: 1%;
     margin-left: 10%;
 }
@@ -165,7 +137,7 @@ body, html{
     width: 30%;
     float: right;
     margin-right: 15%;
-    color: #188AB6;
+    color: #00698D;
     padding: 0% 2% 0% 2%;
     border-radius:10px;
     background-color: #FAF3EB;
@@ -174,12 +146,16 @@ body, html{
     font-family: anakotmai;
     font-size: 22px;
     background-color: #F65832;
-    color: #272822;
+    color: #FAF3EB;
     border-radius:4px;
     border: none;
-    padding: 1% 3% 1% 3%;
+    padding: 1% 7%;
     margin-left: 34%;
     cursor: pointer;
+}
+#data-user button:hover{
+    transition-duration: 0.5s;
+    opacity: 0.5;
 }
 #question-frame{
     position: absolute;
@@ -304,15 +280,15 @@ body, html{
     font-family: anakotmailight;
     font-weight: bolder;
     line-height: 0.6;  
-    color: #188AB6;
+    color: #F65832;
 }
 #result-score h3{
     font-family: anakotmai;
     display: inline;
-    color: #188AB6;
+    color: #F65832;
 }
 #result-score h2{
-    color: #F65832;
+    color: #00698D;
     display: inline;
     font-family: anakotmai;
 }
@@ -323,19 +299,18 @@ body, html{
     margin-right: auto; 
 }
 #btn-menu button{
-    margin:0% 2% 0% 2%;
+    margin:0% 3%;
     padding:1% 2% 1% 2%;
     font-size:20px;
     font-family: anakotmai;
-    color: #188AB6;
     background-color: #FAF3EB;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 #btn-menu button:hover{
-    transition-duration: 0.4s;
-    padding:1% 3% 1% 3%;
-    cursor: pointer;
+    transition-duration: 0.5s;
+    opacity: 0.5;
 }
 .videoWrapper {
     padding-bottom: 45%; /* 16:9 */
@@ -575,8 +550,8 @@ body, html{
     border-radius: 10px;
 }
 #btn-menu button:hover{
-    transition-duration: 0.4s;
-    padding:1% 3% 1% 3%;
+    transition-duration: 0.5s;
+    opacity: 0.5;
 }
 .videoWrapper {
     padding: 3%; /* 16:9 */

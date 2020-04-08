@@ -5,52 +5,37 @@
     <link rel="stylesheet" href="/test.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <div id="btn-header">
-        <button onclick="location.href='/main.html';">ภาพยนตร์สารคดีสั้น</button>
-        <button onclick="location.href='/test.html';">แบบทดสอบความสุข</button>
-        <button onclick="location.href='/happiness.html';">เกี่ยวกับความสุข</button>
-        <button onclick="location.href='/creator.html';">ผู้จัดทำ</button>
-    </div>
-    <div class="topnav">
-        <a href="/index.html" class="active">Logo</a>
-        <div id="myLinks">
-            <a onclick="location.href='/main.html';">ภาพยนตร์สารคดีสั้น</a>
-            <a onclick="location.href='/test.html';">แบบทดสอบความสุข</a>
-            <a onclick="location.href='/happiness.html';">เกี่ยวกับความสุข</a>
-            <a onclick="location.href='/creator.html';">ผู้จัดทำ</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+    <div id="header"></div>
 
 </head>
 
 <body>
     <div id="main-test">
         <img></img>
-        <h1>แบบทดสอบ</h1>
-        <h2>ดัชนีชี้วัดความสุขคนไทยฉบับสั้น</h2>
-        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่าน
-            มากที่สุด และขอความร่วมมือตอบคำถามทุกข้อ
-            ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
+        <h1>แบบทดสอบดัชนีชี้วัดความสุขคนไทยฉบับสั้น</h1>
+        <h2>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่านมากที่สุด</h2>
+        <p>สำหรับแบบประเมินนี้เป็นแบบประเมินที่ผ่านการศึกษา<br>
+            ในขั้นตอนที่สมบูณ์และเผยแพร่ในระดับประเทศแล้ว <br>
+            แต่หากต้องการการประเมินที่มีรายละเอียดมากกว่านี้ <br>
+            สามารถศึกษาโดยใช้ดัชนี้ชี้วัดความสุขคนไทยฉบับสมบูรณ์ได้</p>
         <button onclick="enterToExplanation()">เข้าสู่ทำแบบทดสอบ</button>
     </div>
 
     <div id="explanation">
         <h1>คำชี้แจง :</h1>
-        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับตัวท่านมากที่สุดและขอความร่วมมือตอบคำถามทุกข้อ</p>
-        <p>คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่านในช่วง 1
-            เดือนที่ผ่านมาจนถึงปัจจุบันให้ท่านสำรวจตัวท่านเองและประเมินเหตุการณ์
-            อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใดโดยคำตอบจะมี 4 ตัวเลือก คือ</p>
+        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับตัวท่านมากที่สุดและขอความร่วมมือตอบคำถามทุกข้อ<br>
+            คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่านในช่วง 1 เดือนที่ผ่านมาจนถึงปัจจุบัน<br>
+            ให้ท่านสำรวจตัวท่านเองและประเมินเหตุการณ์ อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใด
+            โดยคำตอบจะมี 4 ตัวเลือก คือ</p>
 
-        <li>- มากที่สุด หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด หรือเห็นด้วย กับเรื่องนั้น ๆ
-            มากที่สุด</li>
-        <li>- มาก หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มาก หรือเห็นด้วยกับเรื่องนั้น ๆ มาก</li>
-        <li>- เล็กน้อย หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อยหรือเห็นด้วยกับเรื่องนั้น ๆ
-            เพียงเล็กน้อย</li>
-        <li>- ไม่เลย หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก หรือไม่เห็นด้วยกับเรื่องนั้น ๆ</li>
-
+        <li><span>มากที่สุด</span> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด <span>หรือเห็นด้วย
+                กับเรื่องนั้น ๆ มากที่สุด</span></li>
+        <li><span>มาก</span> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มาก <span>หรือเห็นด้วยกับเรื่องนั้น ๆ
+                มาก</span></li>
+        <li><span>เล็กน้อย</span> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อย
+            <span>หรือเห็นด้วยกับเรื่องนั้น ๆ เพียงเล็กน้อย</span></li>
+        <li><span>ไม่เลย</span> หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก <span>หรือไม่เห็นด้วยกับเรื่องนั้น ๆ </span>
+        </li>
         <button onclick="user()">ถัดไป ></button>
     </div>
     <div id="data-user">
@@ -103,8 +88,8 @@
                 <option value="divorce">หย่าร้าง</option>
             </select><br>
             <button onclick="enterToTest()">เริ่มทำแบบทดสอบ</button>
-            <p id=fill-up style="color: red; font-size: 18px; margin-left: 0;text-align: center;">กรุณากรอกให้ครบค่ะ</p>
         </div>
+        <p id=fill-up style="color: #F65832; font-size: 18px; margin-left: 0;text-align: center;">กรุณากรอกให้ครบค่ะ</p>
     </div>
 
     <div id="question-frame">
@@ -133,36 +118,36 @@
 
     <div id="result-score">
         <div class="videoWrapper">
-            <iframe id="video" height="450" width="700"  src="" frameborder="0"
+            <iframe id="video" height="450" width="700" src="" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-            </iframe>
-            <div id="btn-menu">
-                <button onclick="location.href='/test.html';">กลับไปหน้าแบบทดสอบ</button>
-                <button onclick="location.href='/happiness.html';">ข้อมูลเกี่ยวกับความสุข</button>
-            </div>
+        
+        <div id="btn-menu">
+            <button onclick="location.href='/test.html';" style="color: #00698D;">กลับไปหน้าแบบทดสอบ</button>
+            <button onclick="location.href='/happiness.html';" style="color: #F65832;">ข้อมูลเกี่ยวกับความสุข</button>
         </div>
-        <span>
-            <h3>ขอบคุณที่เข้าร่วมการประเมิน</h3><br>
-            <h3>แบบทดสอบความสุข</h3><br><br>
-            <h2>คุณได้คะแนนรวม </h2>
-            <h2 id=point></h2>
-            <h2> คะแนน</h2>
-            <br><br>
-            <h3>การแปลผลการประเมิน</h3><br>
-            <h2 id="analysis"></h2>
-            <br>
-            <p>เกณฑ์ปกติที่กำหนด</p>
-            <p>คะแนน 0 - 43 มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)</p>
-            <p>คะแนน 44 - 50 มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)</p>
-            <p>คะแนนมากกว่า 50 มีสุขภาพจิตดีกว่าคนทั่วไป (Good)</p>
-            <br>
-            <p>คำแนะนำเบื้องต้น:</p>
-            <p>ในกรณที่ท่านมีคะแนนอยู่ในกลุ่มสุขภาพจิตต่ำกว่าคนทั่วไป</p>
-            <p>ท่านอาจช่วยเหลือตนเองเบื้องต้น</p>
-            <p>โดยขอรับบริการปรึกษาจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้</p>
-            <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
-        </span>
+    </div>
+    <span>
+        <h3>ขอบคุณที่เข้าร่วมการประเมิน</h3><br>
+        <h3>แบบทดสอบความสุข</h3><br><br>
+        <h2>คุณได้คะแนนรวม </h2>
+        <h2 id=point></h2>
+        <h2> คะแนน</h2>
+        <br><br>
+        <h3>การแปลผลการประเมิน</h3><br>
+        <h2 id="analysis"></h2>
+        <br>
+        <p>เกณฑ์ปกติที่กำหนด</p>
+        <p>คะแนน 0 - 43 มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)</p>
+        <p>คะแนน 44 - 50 มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)</p>
+        <p>คะแนนมากกว่า 50 มีสุขภาพจิตดีกว่าคนทั่วไป (Good)</p>
+        <br>
+        <p>คำแนะนำเบื้องต้น:</p>
+        <p>ในกรณที่ท่านมีคะแนนอยู่ในกลุ่มสุขภาพจิตต่ำกว่าคนทั่วไป</p>
+        <p>ท่านอาจช่วยเหลือตนเองเบื้องต้น</p>
+        <p>โดยขอรับบริการปรึกษาจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้</p>
+        <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
+    </span>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
@@ -211,16 +196,14 @@
         ]
 
         function enterToTest() {
-            document.getElementById("data-user").style.display = "none";
-            document.getElementById("question-frame").style.display = "block";
             if (data.age == "" || data.career == "" || data.education == "" ||
                 data.sex == "" || data.status == "") {
                 document.getElementById("fill-up").style.display = "block";
             } else {
-                //var firebaseRef = firebase.database().ref("User");
-                //firebaseRef.child(Date.now()).set(data)
-                // document.getElementById("data-user").style.display = "none";
-                //document.getElementById("question-frame").style.display = "block";
+                var firebaseRef = firebase.database().ref("User");
+                firebaseRef.child(Date.now()).set(data)
+                document.getElementById("data-user").style.display = "none";
+                document.getElementById("question-frame").style.display = "block";
             }
         }
 
@@ -298,19 +281,16 @@
                 document.getElementById("video").src = "https://www.youtube.com/embed/UsaGgEjqNoE?autoplay=1&controls=0";
                 document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
             }
-            
-        }
-        function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
+
         }
 
     </script>
-
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+        });
+    </script>
 </body>
 
 </html>
