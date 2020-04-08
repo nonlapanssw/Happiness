@@ -18,8 +18,10 @@
 body, html{
 	font-family:anakotmai;
     margin:0;
-    padding:0;
-}#btn-header{
+	padding:0;
+}
+@media screen and (min-width: 1000px){
+#btn-header{
 	align-items: center;
 	text-align: center;
 	background-color: #F65832;
@@ -80,4 +82,40 @@ body, html{
 #btn-enter:active {
     background-color: #EC6665;
     color:#FDF3DD;
-}
+}}
+@media screen and (max-width: 1000px){
+	#btn-header{
+		display: none;
+	}
+	#HAPPINESS{
+		font-family:anakotmai;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 100px;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.1em;
+		color: #FEB954;
+		margin-top: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:0% ;
+	}
+	#btn-enter{
+		font-family:anakotmai;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 40%;
+		background: #EC6665;
+		border-radius: 20px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 100%;
+		padding: 4%;
+		margin-top: 5%;
+		font-size: 40px;
+		align-items: center;
+		color: #FDF3DD;
+		border: 1px solid #FDF3DD;
+	}}
