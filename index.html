@@ -2,24 +2,51 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/index.css">
-    <div id="header"></div>
+  <link rel="stylesheet" href="/index.css">
+  <div id="header"></div>
 
 </head>
 
 <body>
+  <div id="player"></div>
+  <p id="HAPPINESS">HAPPINESS</p>
+  <button id="btn-enter" onclick="enter()">START</button>
 
-    <p id="HAPPINESS">HAPPINESS</p>
-    <button id="btn-enter" onclick="location.href='/main.html';">START</button>
+  <script src="https://www.youtube.com/player_api"></script>
+  <script>
+    var player;
+    function onYouTubePlayerAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'fwmvF5ffmhg',
+        events: {
+          'onReady': onPlayerReady,
+        },
+        playerVars: {
+          'autoplay': 0,
+          'controls': 0,
+          'rel': 0,
+          'showinfo': 0,
+          'cc_load_policy': 3,
+          'loop':1,
+          'fs':0
+        }
+      });
+    }
+
+    // autoplay video
+    function onPlayerReady(event) {
+      player.setPlaybackQuality('hd1080');
+      event.target.playVideo();
+    }
 
 
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script> 
-    $(function(){
-      $("#header").load("header.html"); 
-    });
-    </script> 
 
+    function enter(){
+      location.href='/main.html';
+      document.getElementById.player.videoId="";
+
+    }
+  </script>
 </body>
 
 </html>
