@@ -20,7 +20,7 @@
 	padding:0;
 	overflow-y: hidden;
 }body{
-	background-image: url("https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/p.14-14.png?alt=media&token=b32b3845-e857-4ae0-99bf-f7567f202814"); /* The image used */
+	background-image: url("p.14-14.png"); /* The image used */
   	background-position: center; /* Center the image */
   	background-repeat: no-repeat; /* Do not repeat the image */
   	background-size: cover; /* Resize the background image to cover the entire container */
