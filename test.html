@@ -10,34 +10,6 @@
 </head>
 
 <body>
-    <div id="main-test">
-        <img></img>
-        <h1>แบบทดสอบดัชนีชี้วัดความสุขคนไทยฉบับสั้น</h1>
-        <h2>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่านมากที่สุด</h2>
-        <p>สำหรับแบบประเมินนี้เป็นแบบประเมินที่ผ่านการศึกษา<br>
-            ในขั้นตอนที่สมบูณ์และเผยแพร่ในระดับประเทศแล้ว <br>
-            แต่หากต้องการการประเมินที่มีรายละเอียดมากกว่านี้ <br>
-            สามารถศึกษาโดยใช้ดัชนี้ชี้วัดความสุขคนไทยฉบับสมบูรณ์ได้</p>
-        <button onclick="enterToExplanation()">เข้าสู่ทำแบบทดสอบ</button>
-    </div>
-
-    <div id="explanation">
-        <h1>คำชี้แจง :</h1>
-        <p>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับตัวท่านมากที่สุดและขอความร่วมมือตอบคำถามทุกข้อ<br>
-            คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่านในช่วง 1 เดือนที่ผ่านมาจนถึงปัจจุบัน<br>
-            ให้ท่านสำรวจตัวท่านเองและประเมินเหตุการณ์ อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใด
-            โดยคำตอบจะมี 4 ตัวเลือก คือ</p>
-
-        <li><span>มากที่สุด</span> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด <span>หรือเห็นด้วย
-                กับเรื่องนั้น ๆ มากที่สุด</span></li>
-        <li><span>มาก</span> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มาก <span>หรือเห็นด้วยกับเรื่องนั้น ๆ
-                มาก</span></li>
-        <li><span>เล็กน้อย</span> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อย
-            <span>หรือเห็นด้วยกับเรื่องนั้น ๆ เพียงเล็กน้อย</span></li>
-        <li><span>ไม่เลย</span> หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก <span>หรือไม่เห็นด้วยกับเรื่องนั้น ๆ </span>
-        </li>
-        <button onclick="user()">ถัดไป ></button>
-    </div>
     <div id="data-user">
         <p>กรุณาระบุรายละเอียดของคุณ ให้ครบด้วยค่ะ</p>
         <div>
@@ -89,7 +61,7 @@
             </select><br>
             <button onclick="enterToTest()">เริ่มทำแบบทดสอบ</button>
         </div>
-        <p id=fill-up style="color: #F65832; font-size: 18px; margin-left: 0;text-align: center;">กรุณากรอกให้ครบค่ะ</p>
+        <p id=fill-up style="color: black; font-size: 18px; margin-left: 0;text-align: center;">กรุณากรอกให้ครบค่ะ</p>
     </div>
 
     <div id="question-frame">
@@ -183,7 +155,7 @@
         }
     </script>
     <script>
-        var data = { sex: "", age: "", education: "", career: "", status: "" ,score:""};
+        var data = { sex: "", age: "", education: "", career: "", status: "", score: "" };
         var number = 1
         var point = []
         var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
@@ -253,10 +225,6 @@
             }
 
         }
-        function enterToExplanation() {
-            document.getElementById("explanation").style.display = "block";
-            document.getElementById("main-test").style.display = "none";
-        }
         function user() {
             document.getElementById("explanation").style.display = "none";
             document.getElementById("data-user").style.display = "block";
@@ -264,7 +232,7 @@
         function enterToResult() {
             var sum = 0
             sum = point.reduce((a, b) => a + b, 0)
-            data.score=sum
+            data.score = sum
             var firebaseRef = firebase.database().ref("User");
             firebaseRef.child(Date.now()).set(data)
             document.getElementById("question-frame").style.display = 'none'

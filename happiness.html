@@ -7,122 +7,95 @@
 </head>
 
 <body>
-    <form id="btn-group" action="/action_page.php">
-        <input type="radio" id="page1" name="page" onclick="changePage(this.value)" value="1" checked>
-        <label for="page1"></label><br><br>
-        <input type="radio" id="page2" name="page" onclick="changePage(this.value)" value="2">
-        <label for="page2"></label><br><br>
-        <input type="radio" id="page3" name="page" onclick="changePage(this.value)" value="3">
-        <label for="page3"></label><br><br>
-        <input type="radio" id="page4" name="page" onclick="changePage(this.value)" value="4">
-        <label for="page4"></label><br><br>
-        <input type="radio" id="page5" name="page" onclick="changePage(this.value)" value="5">
-        <label for="page5"></label><br><br>
-        <input type="radio" id="page6" name="page" onclick="changePage(this.value)" value="6">
-        <label for="page6"></label>
-    </form>
-    <div id="happiness" style="height: 100%; margin: 0;">
-        <div id="P1-happiness" >
-            <h1 style="color: #FDC848;">ความสุข </h1>
-            <h1 style="color: #00698D;">คืออะไร</h1>
-            <p style="color: #00698D; font-size: 70px;margin-block-start: 0em;">The <span
-                    style="color: #FDC848;">Happiness</span></p>
+    <main>
+        <nav class="section-nav">
+            <ol>
+                <li><a href="#P2-happiness">O</a></li>
+                <li><a href="#P3-happiness">O</a></li>
+                <li><a href="#P4-happiness">O</a></li>
+                <li><a href="#P5-happiness">O</a></li>
+            </ol>
+        </nav>
+        <div id="happiness" style="height: 100%; margin: 0; ">
+            <section id="P1-happiness">
+                <h1 style="color: #FDC848;">ความสุข </h1>
+                <h1 style="color: #00698D;">คืออะไร</h1>
+                <p style="color: #00698D; font-size: 70px;margin-block-start: 0em;">The <span
+                        style="color: #FDC848;">Happiness</span></p>
+            </section>
+            <section id="P2-happiness">
+                <p>ความหมายของความสุข</p>
+                <hr>
+                <div class="video-P2">
+                    <iframe id="video-2" height="450" width="550" frameborder="0"
+                        src="https://www.youtube.com/embed/ix_sFS1WlL0?controls=0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="P3-happiness">
+                <p>วิเคราะห์ความสุข</p>
+                <p>ตามหลัก Bio - Psycho - Social Model</p>
+                <hr>
+                <div class="video-P3">
+                    <iframe id="video-3" height="400" width="550" frameborder="0"
+                        src="https://www.youtube.com/embed/zS7YrpZMrQ8?controls=0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="P4-happiness">
+                    <p>แนวทางการปฏิบัติตน</p>
+                    <p>&nbsp; 1.</p>
+                    <p>&nbsp; 2.</p>
+                    <p>&nbsp; 3.</p>
+                    <p>&nbsp; 4.</p>
+                    <p>&nbsp; 5.</p>
+                    <p>&nbsp; 6.</p>
+                    <p>&nbsp; 7.</p>
+                    <p>&nbsp; 8.</p>
+                    <p>&nbsp; 9.</p>
+                    <p>&nbsp; 10.</p>
+            </section>
+            <section id="P5-happiness">
+                <p>ดัชนีชี้วัดความสุขคนไทย เป็นแบบประเมินความสุขด้วยตนเอง ซึ่งสร้างขึ้นภายใต้กรอบ
+                    แนวคิดคำจำกัดความของความสุข
+                    <br>หมายถึง สภาพชีวิตที่เป็นสุข อันเป็นผลจากการมีความสามารถในการจัดการปัญหาในการดำเนินชีวิต
+                    <br>มีศักยภาพที่จะพัฒนาตนเองเพื่อคุณภาพชีวิตที่ดี โดยครอบ-คลุมถึงความดีงามภายในจิตใจ
+                    <br>ภายใต้สภาพสังคมและสิ่งแวดล้อมที่เปลี่ยนแปลงไป</p>
+                <br>
+                <p>ในการนำดัชนีชี้วัดสุขภาพจิตคนไทยไปใช้เพื่อประเมินซ้ำว่าตนเองมีระดับความสุข
+                    <br>เปลี่ยนแปลงไปจากเดิมหรือไม่ อย่างเร็วควรประเมินซ้ำอีก 1 เดือน
+                    <br>หากต้องการผู้ให้คำปรึกษาโดยขอรับจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้
+                    <br>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
+            </section>
         </div>
-        <div id="P2-happiness">
-            <p>ความหมายของความสุข</p>
-            <hr>
-            <div class="video-P2">
-                <iframe id="video-2" height="450" width="700" frameborder="0"
-                src="https://www.youtube.com/embed/ix_sFS1WlL0?controls=0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-        <div id="P3-happiness">
-            <p>วิเคราะห์ความสุข</p>
-            <p>ตามหลัก Bio - Psycho - Social Model</p>
-            <hr>
-            <div class="video-P3">
-                <iframe id="video-3" height="400" width="650" frameborder="0"
-                    src="https://www.youtube.com/embed/zS7YrpZMrQ8?controls=0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-        <div id="P4-happiness">
-            <div id="P4-happiness-1">
-                <p>แนวทางการปฏิบัติตน</p>
-                <p>&nbsp; 1.</p>
-                <p>&nbsp; 2.</p>
-                <p>&nbsp; 3.</p>
-                <p>&nbsp; 4.</p>
-                <p>&nbsp; 5.</p>
-            </div>
-            <div id="P4-happiness-2">
-                kkkkjk
-            </div>
-        </div>
-        <div id="P5-happiness">
-            <div id="P5-happiness-1">
-                kkkkjk
-            </div>
-            <div id="P5-happiness-2">
-                <p>แนวทางการปฏิบัติตน (ต่อ)</p>
-                <p>&nbsp;6.</p>
-                <p>&nbsp;7.</p>
-                <p>&nbsp;8.</p>
-                <p>&nbsp;9.</p>
-                <p>&nbsp;10.</p>
-            </div>
-        </div>
-        <div id="P6-happiness" style="height: 70%;">
-            <p>ดัชนีชี้วัดความสุขคนไทย เป็นแบบประเมินความสุขด้วยตนเอง ซึ่งสร้างขึ้นภายใต้กรอบ
-                แนวคิดคำจำกัดความของความสุข
-                <br>หมายถึง สภาพชีวิตที่เป็นสุข อันเป็นผลจากการมีความสามารถในการจัดการปัญหาในการดำเนินชีวิต
-                <br>มีศักยภาพที่จะพัฒนาตนเองเพื่อคุณภาพชีวิตที่ดี โดยครอบ-คลุมถึงความดีงามภายในจิตใจ
-                <br>ภายใต้สภาพสังคมและสิ่งแวดล้อมที่เปลี่ยนแปลงไป</p>
-            <br>
-            <p>ในการนำดัชนีชี้วัดสุขภาพจิตคนไทยไปใช้เพื่อประเมินซ้ำว่าตนเองมีระดับความสุข
-                <br>เปลี่ยนแปลงไปจากเดิมหรือไม่ อย่างเร็วควรประเมินซ้ำอีก 1 เดือน
-                <br>หากต้องการผู้ให้คำปรึกษาโดยขอรับจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้
-                <br>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
-        </div>
-    </div>
-    <script>
-        function changePage(page) {
-            var page = parseInt(page)
-           /* if (page == 1) {
-                document.getElementById("P1-happiness").style.display = 'block'
-                document.getElementById("video-2").src=""
-                document.getElementById("video-3").src=""
-            } else if (page == 2) {
-                document.getElementById("P2-happiness").style.display = 'block'
-                document.getElementById("video-3").src=""
-                document.getElementById("video-2").src=""
-            } else if (page == 3) {
-                document.getElementById("P3-happiness").style.display = 'block'
-                document.getElementById("video-2").src=""
-                document.getElementById("video-3").src=""
-            } else if (page == 4) {
-                document.getElementById("P4-happiness").style.display = 'block'
-                document.getElementById("video-2").src=""
-                document.getElementById("video-3").src=""
-            } else if (page == 5) {
-                document.getElementById("P5-happiness").style.display = 'block'
-                document.getElementById("video-2").src=""
-                document.getElementById("video-3").src=""
-            } else if (page == 6) {
-                document.getElementById("P6-happiness").style.display = 'block'
-                document.getElementById("video-2").src=""
-                document.getElementById("video-3").src=""
-            }
-*/
-        }
-    </script>
+
+    </main>
+
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(function () {
             $("#header").load("header.html");
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    if (entry.intersectionRatio > 0) {
+                        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                    } else {
+                        document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+                    }
+                });
+            });
+
+            // Track all sections that have an `id` applied
+            document.querySelectorAll('section[id]').forEach((section) => {
+                observer.observe(section);
+            });
+
         });
     </script>
 </body>

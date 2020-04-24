@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'anakotmaibold';
+	src: url('Anakotmai-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anakotmailight';
+	src: url('Anakotmai-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'anakotmai';
+	src: url('Anakotmai-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body, html{
+	font-family:anakotmai;
+    margin:0;
+    padding:0;
+    overflow-y: hidden;
+}
+img{
+	z-index: -1;
+
+}
+@media screen and (min-width: 1000px) {
+#explanation{
+    position: absolute;
+    border: solid 0.5px white; 
+    margin:2%;
+    border-radius: 10px; 
+    padding: 3%;
+    height: 70%;
+    width: 90%;
+    color: #F65832;
+}
+#explanation p,#explanation h1{
+    text-align: center;
+}
+#explanation p{
+    font-size: 20px;
+}
+#explanation span{
+    color: #F65832;
+}
+#explanation li{
+    margin-left: 15%;
+    padding: 1%;
+    font-size: 18px;
+    list-style-type:none;
+}
+#explanation button{
+    float: right;
+    font-family:anakotmai;
+    background-color: #00698D;
+    color: #F65832;
+    border: none;
+    font-size: 30px;
+    padding: 0% 5%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#explanation button:hover{
+    transition-duration: 0.5s;
+    opacity: 0.5;
+}
+}
+
+@media screen and (max-width: 1000px) {
+      #btn-header{
+          display: none;
+    
+    }#explanation{
+        font-family:anakotmailight;
+        margin-left: auto;
+        margin-right: auto;
+        color:#188AB6;
+        padding: 5%;
+        list-style-type:none;
+        font-size: 14px;
+        text-align: center;
+    }
+    #explanation li{
+        margin-left: 5%;
+        font-size: 14px;
+        text-align: left;
+    }
+    #explanation button{
+        margin-top: 10%;
+        font-family:anakotmai;
+        background-color: #188AB6;
+        color: #F65832;
+        border: none;
+        font-size: 24px;
+        padding: 0% 5% 0% 5%;
+        border-radius: 10px;
+        width: 50%;
+    }
+}

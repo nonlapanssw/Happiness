@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'anakotmaibold';
+	src: url('Anakotmai-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'anakotmailight';
+	src: url('Anakotmai-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'anakotmai';
+	src: url('Anakotmai-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body, html{
+	font-family:anakotmai;
+    margin:0;
+    padding:0;
+    overflow-y: hidden;
+    background-color: #F65832;
+}
+img{
+	z-index: -1;
+}@media screen and (min-width: 1000px) {
+    #main-test{
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 5%;
+        border-radius: 10px; 
+        padding-bottom: 10%;
+        height: 60%;
+        width: 90%;
+        text-align: right;
+        color: #FAF3EB;
+    }
+    #main-test h1,#main-test h2{
+        font-family: anakotmai;
+        padding-right: 5%;
+    }
+    #main-test p{
+        font-family:anakotmailight;
+        padding-right: 5%; 
+        line-height: 2;
+        font-size: 20px;
+    }#main-test h1{
+        font-size: 40px;
+    }#main-test h2{
+        font-size: 30px;
+    }
+    #main-test button{
+        margin-right: 5%;
+        font-family:anakotmai;
+        color: #F7AB37;
+        font-size: 30px;
+        border: #F7AB37 0.5px solid;
+        background: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 1% 1%;
+        position: relative;
+    }
+    #main-test button:hover{
+        transition-duration: 0.5s;
+        opacity: 0.5;
+    }
+}
+    
+    @media screen and (max-width: 1000px) {
+    
+          #btn-header{
+              display: none;
+          }
+        #main-test{
+            font-size: 18px;
+            text-align: center;
+            padding: 10%; 
+        }
+        #main-test p{
+            text-align: center;
+            font-family:anakotmailight;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        #main-test button{
+            margin-top: 25%;
+            font-family:anakotmaibold;
+            color: #F65832;
+            font-size: 30px;
+            text-shadow: black;
+            background: none;
+            cursor: pointer;
+        }
+    }

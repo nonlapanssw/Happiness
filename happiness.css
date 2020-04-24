@@ -21,69 +21,12 @@ body, html{
     padding:0;
     height: 100%;
     background-color:#FAF3EB;
+    scroll-behavior: smooth;
 }
-#btn-group{
-    position: fixed;
-    padding-left: 3%;
-    float: left;
-    display: block;
-}
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-    margin-left: 3%;
-}
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
-    margin: 3%;
-    position: relative;
-    padding-left: 3%;
-    cursor: pointer;
-    line-height: 20px;
-    display: inline-flex;
-    color: #F65832;
-}
-[type="radio"]:checked + label::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 25px;
-    height: 25px;
-    border: 3px solid #F65832;
-    border-radius: 100%;
-    background: #F65832;
-}
-[type="radio"]:not(:checked) + label::after
-{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 25px;
-    height: 25px;
-    border: 3px solid ;
-    border-radius: 100%;
-    background: none;
-}
-[type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 25px;
-    height: 25px;
-    border: 3px solid #FAF3EB;
-    border-radius: 100%;
-    background: none;
-}[type="radio"]:checked + label:hover,
-[type="radio"]:not(:checked) + label:hover {
-    color: #F65832;
-}
-#happiness div{
-    height: 95%; 
+#happiness section{
+    height: 80%;
+    padding-bottom: 20rem;
+    margin-left:10% ;
 }
 #P1-happiness{
     text-align: center; 
@@ -103,48 +46,7 @@ body, html{
     margin: 0;
     padding: 0;
 }
-#P4-happiness-1{
-    position: static;
-    left: 0;
-    float: left;
-    background-color: #F65832;
-    width: 50%;
-    color: #00698D;
-    font-size: 30px;
-}
-#P4-happiness-2{
-    position: static;
-    bottom: 0;
-    width: 50%;
-    float:right;
-    background-color: #00698D;
-    color: #F65832;
-}#P4-happiness-1 p{
-    padding-left: 20%;
-}
 #P5-happiness{
-    margin: 0;
-    padding: 0;
-}
-#P5-happiness-1{
-    position: static;
-    left: 0;
-    float: left;
-    background-color: #00698D;
-    width: 50%;
-}
-#P5-happiness-2{
-    position: static;
-    bottom: 0;
-    width: 50%;
-    float:right;
-    background-color: #F65832;
-    font-size: 30px;
-    color: #00698D;
-}#P5-happiness-2 p{
-    padding-left: 3%;
-}
-#P6-happiness{
     margin-top: 10%;
     font-family:anakotmai;
     text-align: center;
@@ -163,6 +65,38 @@ hr{
 }.video-P3{
     padding-bottom: 45%; /* 16:9 */
     margin-left: 8%;
-    height:50%;
-    width: 50%;
+    height:40%;
+    width: 40%;
+}
+nav{
+    position: fixed;
+}
+.section-nav li.active > a {
+	color: #333;
+}
+.section-nav {
+	padding-left: 0;
+	border-left: 1px solid #efefef;
+}
+.section-nav a {
+	text-decoration: none;
+	display: block;
+	padding: .125rem 0;
+	color: #ccc;
+	transition: all 50ms ease-in-out;
+}
+.section-nav a:hover,
+.section-nav a:focus {
+	color: #666;
+}
+* {
+	box-sizing: border-box;
+}
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin-left: 1rem;
 }
