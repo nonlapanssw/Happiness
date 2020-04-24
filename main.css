@@ -18,9 +18,7 @@ body{
     height: 100%;
 }
 @media screen and (min-width: 1000px) {
-    #btn-test{
-    display: none;
-}
+    
 #btn-test button{  
     font-family: 'anakotmai';
     background-color: #FEB954;
@@ -34,9 +32,6 @@ body{
     cursor: pointer;
 }}
 @media screen and (max-width: 1000px) {
-    #btn-test{
-        display: none;
-    }
     #btn-test button{  
         font-family: 'anakotmai';
         background-color: #FEB954;

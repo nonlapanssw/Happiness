@@ -21,15 +21,11 @@ body, html{
     padding:0;
     height: 100%;
     background-color:#FAF3EB;
-    overflow-y: hidden;
 }
 #btn-group{
-    position: absolute;
+    position: fixed;
     padding-left: 3%;
     float: left;
-    display: block;
-    margin-top: 5%;
-    padding-bottom: 5%;
     display: block;
 }
 [type="radio"]:checked,
@@ -85,6 +81,9 @@ body, html{
 }[type="radio"]:checked + label:hover,
 [type="radio"]:not(:checked) + label:hover {
     color: #F65832;
+}
+#happiness div{
+    height: 95%; 
 }
 #P1-happiness{
     text-align: center; 
@@ -156,9 +155,7 @@ hr{
     border: 0.5px solid #F65832;
     width: 20%;
   }
-#P2-happiness,#P3-happiness,#P4-happiness,#P5-happiness,#P6-happiness{
-    display: none;
-}.video-P2 {
+.video-P2 {
     padding-bottom: 45%; /* 16:9 */
     margin-left: 45%;
     height:50%;

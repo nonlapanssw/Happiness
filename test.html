@@ -121,33 +121,34 @@
             <iframe id="video" height="450" width="700" src="" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        
-        <div id="btn-menu">
-            <button onclick="location.href='/test.html';" style="color: #00698D;">กลับไปหน้าแบบทดสอบ</button>
-            <button onclick="location.href='/happiness.html';" style="color: #F65832;">ข้อมูลเกี่ยวกับความสุข</button>
+
+            <div id="btn-menu">
+                <button onclick="location.href='/test.html';" style="color: #00698D;">กลับไปหน้าแบบทดสอบ</button>
+                <button onclick="location.href='/happiness.html';"
+                    style="color: #F65832;">ข้อมูลเกี่ยวกับความสุข</button>
+            </div>
         </div>
-    </div>
-    <span>
-        <h3>ขอบคุณที่เข้าร่วมการประเมิน</h3><br>
-        <h3>แบบทดสอบความสุข</h3><br><br>
-        <h2>คุณได้คะแนนรวม </h2>
-        <h2 id=point></h2>
-        <h2> คะแนน</h2>
-        <br><br>
-        <h3>การแปลผลการประเมิน</h3><br>
-        <h2 id="analysis"></h2>
-        <br>
-        <p>เกณฑ์ปกติที่กำหนด</p>
-        <p>คะแนน 0 - 43 มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)</p>
-        <p>คะแนน 44 - 50 มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)</p>
-        <p>คะแนนมากกว่า 50 มีสุขภาพจิตดีกว่าคนทั่วไป (Good)</p>
-        <br>
-        <p>คำแนะนำเบื้องต้น:</p>
-        <p>ในกรณที่ท่านมีคะแนนอยู่ในกลุ่มสุขภาพจิตต่ำกว่าคนทั่วไป</p>
-        <p>ท่านอาจช่วยเหลือตนเองเบื้องต้น</p>
-        <p>โดยขอรับบริการปรึกษาจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้</p>
-        <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
-    </span>
+        <span>
+            <h3>ขอบคุณที่เข้าร่วมการประเมิน</h3><br>
+            <h3>แบบทดสอบความสุข</h3><br><br>
+            <h2>คุณได้คะแนนรวม </h2>
+            <h2 id=point></h2>
+            <h2> คะแนน</h2>
+            <br><br>
+            <h3>การแปลผลการประเมิน</h3><br>
+            <h2 id="analysis"></h2>
+            <br>
+            <p>เกณฑ์ปกติที่กำหนด</p>
+            <p>คะแนน 0 - 43 มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)</p>
+            <p>คะแนน 44 - 50 มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)</p>
+            <p>คะแนนมากกว่า 50 มีสุขภาพจิตดีกว่าคนทั่วไป (Good)</p>
+            <br>
+            <p>คำแนะนำเบื้องต้น:</p>
+            <p>ในกรณที่ท่านมีคะแนนอยู่ในกลุ่มสุขภาพจิตต่ำกว่าคนทั่วไป</p>
+            <p>ท่านอาจช่วยเหลือตนเองเบื้องต้น</p>
+            <p>โดยขอรับบริการปรึกษาจากสถานบริการสาธารณสุขใกล้บ้านของท่านได้</p>
+            <p>หรือติดต่อสายด่วน 1323 กรมสุขภาพจิต</p>
+        </span>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
@@ -182,7 +183,7 @@
         }
     </script>
     <script>
-        var data = { sex: "", age: "", education: "", career: "", status: "" };
+        var data = { sex: "", age: "", education: "", career: "", status: "" ,score:""};
         var number = 1
         var point = []
         var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
@@ -200,14 +201,10 @@
                 data.sex == "" || data.status == "") {
                 document.getElementById("fill-up").style.display = "block";
             } else {
-                var firebaseRef = firebase.database().ref("User");
-                firebaseRef.child(Date.now()).set(data)
                 document.getElementById("data-user").style.display = "none";
                 document.getElementById("question-frame").style.display = "block";
             }
         }
-
-
 
         function collectScore(score) {
 
@@ -225,7 +222,7 @@
             } else {
                 point[number - 1] = parseInt(score)
             }
-            console.log(point)
+            //console.log(point)
             if (point[number - 1] !== undefined) {
                 if (number <= 14) {
                     document.getElementById("number").innerHTML = number + 1
@@ -260,7 +257,6 @@
             document.getElementById("explanation").style.display = "block";
             document.getElementById("main-test").style.display = "none";
         }
-
         function user() {
             document.getElementById("explanation").style.display = "none";
             document.getElementById("data-user").style.display = "block";
@@ -268,17 +264,20 @@
         function enterToResult() {
             var sum = 0
             sum = point.reduce((a, b) => a + b, 0)
+            data.score=sum
+            var firebaseRef = firebase.database().ref("User");
+            firebaseRef.child(Date.now()).set(data)
             document.getElementById("question-frame").style.display = 'none'
             document.getElementById("result-score").style.display = 'block';
             document.getElementById("point").innerHTML = sum
             if (sum <= 43) {
-                document.getElementById("video").src = "https://www.youtube.com/embed/2U2DBjPJgI4?autoplay=1&controls=0";
+                document.getElementById("video").src = "https://www.youtube.com/embed/gTXDz1c3adq?autoplay=1&controls=0";
                 document.getElementById("analysis").innerHTML = "มีสุขภาพจิตต่ำกว่าคนทั่วไป (Poor)"
             } else if (sum >= 44 && sum <= 50) {
-                document.getElementById("video").src = "https://www.youtube.com/embed/dQaI3VkSCi0?autoplay=1&controls=0";
+                document.getElementById("video").src = "https://www.youtube.com/embed/7hEb9Xb-710?autoplay=1&controls=0";
                 document.getElementById("analysis").innerHTML = "มีสุขภาพจิตเท่ากับคนทั่วไป (Fair)"
             } else if (sum > 50) {
-                document.getElementById("video").src = "https://www.youtube.com/embed/UsaGgEjqNoE?autoplay=1&controls=0";
+                document.getElementById("video").src = "https://www.youtube.com/embed/7hEb9Xb-710?autoplay=1&controls=0";
                 document.getElementById("analysis").innerHTML = "มีสุขภาพจิตดีกว่าคนทั่วไป (Good)"
             }
 
