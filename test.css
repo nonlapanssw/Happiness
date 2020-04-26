@@ -23,7 +23,6 @@ body, html{
 }
 body{
     background-color: #F65832;
-    margin-top: 30px;
 }
 img{
     z-index: -1;
@@ -33,7 +32,9 @@ img{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
-
+#data-user{
+    margin-top: 5%;
+}
 #data-user div{
     color: #FAF3EB;
     background-color: #00698D;
@@ -257,9 +258,6 @@ img{
 }
 
 @media screen and (max-width: 1000px) {
-      #btn-header{
-          display: none;
-    }
     #data-user{
         padding: 4%;
     }
@@ -269,14 +267,14 @@ img{
         margin-left: auto;
         margin-right: auto;
         font-family: anakotmai;
-        font-size: 20px;
+        font-size: 16px;
         border-radius: 10px;
         line-height: 1.5;
         text-align: center;
     }
     #data-user p{
-        font-size: 26px;
-        color: #188AB6;
+        font-size: 18px;
+        color: black;
         text-align: center;
         margin: 2%;
     }
@@ -296,10 +294,10 @@ img{
     #data-user button{
         font-family: anakotmai;
         font-size: 26px;
-        background-color: #F65832;
-        color: #272822;
+        background-color: transparent;
+        color: #F65832;
         border-radius:10px;
-        border: none;
+        border: #F65832 0.5px solid;
         padding: 1% 5% 1% 5%;
         margin-top: 10%;
     }

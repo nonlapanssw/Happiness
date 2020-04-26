@@ -41,8 +41,7 @@
                 <p>ความหมายของความสุข</p>
                 <hr>
                 <div class="video-P2">
-                    <iframe id="video-2" height="450" width="550" frameborder="0"
-                        src=""
+                    <iframe id="video-2" height="360" width="640" frameborder="0" src=""
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -52,8 +51,7 @@
                 <p>ตามหลัก Bio - Psycho - Social Model</p>
                 <hr>
                 <div class="video-P3">
-                    <iframe id="video-3" height="400" width="550" frameborder="0"
-                        src=""
+                    <iframe id="video-3" height="360" width="640" frameborder="0" src=""
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -99,10 +97,15 @@
                     const id = entry.target.getAttribute('id');
                     if (entry.intersectionRatio > 0) {
                         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
-                        if(id=='P2-happiness'){
-                            document.getElementById("video-2").src="https://www.youtube.com/embed/ix_sFS1WlL0?controls=0&autoplay=1"
-                        }else if(id=='P3-happiness'){
-                            document.getElementById("video-3").src="https://www.youtube.com/embed/zS7YrpZMrQ8?controls=0&autoplay=1"
+                        if (id == 'P2-happiness') {
+                            document.getElementById("video-2").src = "https://www.youtube.com/embed/ix_sFS1WlL0?controls=0&autoplay=1"
+                        } else {
+                            document.getElementById("video-2").src = ""
+                        }
+                        if (id == 'P3-happiness') {
+                            document.getElementById("video-3").src = "https://www.youtube.com/embed/zS7YrpZMrQ8?controls=0&autoplay=1"
+                        } else {
+                            document.getElementById("video-3").src = ""
                         }
                     } else {
                         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');

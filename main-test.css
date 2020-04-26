@@ -73,28 +73,31 @@ img{
 }
     
     @media screen and (max-width: 1000px) {
-    
-          #btn-header{
-              display: none;
-          }
         #main-test{
-            font-size: 18px;
+            font-size: 14px;
             text-align: center;
             padding: 10%; 
+            position: absolute;
+            color: #FAF3EB;
         }
         #main-test p{
             text-align: center;
             font-family:anakotmailight;
-            font-size: 18px;
-            line-height: 1.5;
+            font-size: 13px;
+            line-height: 2;
+            color: black;
         }
         #main-test button{
-            margin-top: 25%;
-            font-family:anakotmaibold;
-            color: #F65832;
-            font-size: 30px;
-            text-shadow: black;
+            margin-right: 5%;
+            font-family:anakotmai;
+            color: #F7AB37;
+            font-size: 20px;
+            border: #F7AB37 0.5px solid;
             background: none;
+            border-radius: 4px;
             cursor: pointer;
+            padding: 0.5% 1% ;
+            position: relative;
+            letter-spacing: 2px;
         }
     }
