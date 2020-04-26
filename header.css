@@ -63,6 +63,11 @@
 	text-align: center;
   background-color: #F65832;
   padding: 1%;
+  height:30px ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 #btn-header button{
 	color:#FAF3EB;

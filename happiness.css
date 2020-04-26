@@ -16,21 +16,28 @@
     font-style: normal;
 }
 body, html{
-	font-family:anakotmai;
+    font-family:anakotmai;
     margin:0;
     padding:0;
-    height: 100%;
-    background-color:#FAF3EB;
+    overflow-x: hidden;
     scroll-behavior: smooth;
+}img{
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    
+}#happiness{
+    margin-top: 0;
 }
 #happiness section{
     height: 80%;
-    padding-bottom: 20rem;
+    padding-top: 10rem;
     margin-left:10% ;
 }
 #P1-happiness{
     text-align: center; 
-    margin-top: 13%;
+    margin-top: 5rem;
+    padding-bottom: 10rem;
 }
 #P1-happiness h1{
     font-size: 80px;
@@ -41,10 +48,12 @@ body, html{
     font-size: 40px;
     color: #FDC848;
     line-height: 0.3;
+    padding-bottom: 10rem;
 }
 #P4-happiness{
     margin: 0;
     padding: 0;
+    padding-bottom: 10rem;
 }
 #P5-happiness{
     margin-top: 10%;
@@ -52,6 +61,7 @@ body, html{
     text-align: center;
     color: #00698D;
     font-size: 20px;
+    padding-bottom: 8rem;
 }
 hr{
     border: 0.5px solid #F65832;
@@ -70,6 +80,9 @@ hr{
 }
 nav{
     position: fixed;
+    top: 40%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
 }
 .section-nav li.active > a {
 	color: #333;
@@ -81,7 +94,6 @@ nav{
 .section-nav a {
 	text-decoration: none;
 	display: block;
-	padding: .125rem 0;
 	color: #ccc;
 	transition: all 50ms ease-in-out;
 }
@@ -89,14 +101,11 @@ nav{
 .section-nav a:focus {
 	color: #666;
 }
-* {
-	box-sizing: border-box;
-}
 ul, ol {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 li {
-	margin-left: 1rem;
+    margin-left: 5rem;    
 }

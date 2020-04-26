@@ -3,13 +3,27 @@
 
 <head>
     <link rel="stylesheet" href="/happiness.css">
-    <div id="header" style="position: fixed; top: 0; width: 100%;"></div>
+    <div id="header" style="height: 100%;"></div>
 </head>
 
 <body>
+    <img style="height: 100%; right:0; top: 30px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.5-06.png?alt=media&token=6cd51fa0-44d2-4226-a190-aaacc134aab1"></img>
+    <img style="width:100%; bottom: -40px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.6-06.png?alt=media&token=fd762e30-a73f-4b69-86c8-6bfa4026a1bb"></img>
+    <img style="height: 100%; right: 40px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.4-06.png?alt=media&token=e3a73762-bf6a-4f3d-b5e0-3617a4754232"></img>
+    <img style="height: 100%; width: 100%; top:0px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.7-06.png?alt=media&token=b012b5b2-32d9-4a12-990a-f13af2965008"></img>
+    <img style="width: 100%; top: -40px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.2-06.png?alt=media&token=f1109189-9056-48cd-b360-81f14aa2b5e1"></img>
+    <img style="width: 100%; top: -20px"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.3-06.png?alt=media&token=7811bd0d-ec25-4089-8de8-50522a62d66e"></img>
+
     <main>
         <nav class="section-nav">
             <ol>
+                <li><a href="#P1-happiness">O</a></li>
                 <li><a href="#P2-happiness">O</a></li>
                 <li><a href="#P3-happiness">O</a></li>
                 <li><a href="#P4-happiness">O</a></li>
@@ -28,7 +42,7 @@
                 <hr>
                 <div class="video-P2">
                     <iframe id="video-2" height="450" width="550" frameborder="0"
-                        src="https://www.youtube.com/embed/ix_sFS1WlL0?controls=0"
+                        src=""
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -39,23 +53,23 @@
                 <hr>
                 <div class="video-P3">
                     <iframe id="video-3" height="400" width="550" frameborder="0"
-                        src="https://www.youtube.com/embed/zS7YrpZMrQ8?controls=0"
+                        src=""
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
             </section>
             <section id="P4-happiness">
-                    <p>แนวทางการปฏิบัติตน</p>
-                    <p>&nbsp; 1.</p>
-                    <p>&nbsp; 2.</p>
-                    <p>&nbsp; 3.</p>
-                    <p>&nbsp; 4.</p>
-                    <p>&nbsp; 5.</p>
-                    <p>&nbsp; 6.</p>
-                    <p>&nbsp; 7.</p>
-                    <p>&nbsp; 8.</p>
-                    <p>&nbsp; 9.</p>
-                    <p>&nbsp; 10.</p>
+                <p>แนวทางการปฏิบัติตน</p>
+                <p>&nbsp; 1.</p>
+                <p>&nbsp; 2.</p>
+                <p>&nbsp; 3.</p>
+                <p>&nbsp; 4.</p>
+                <p>&nbsp; 5.</p>
+                <p>&nbsp; 6.</p>
+                <p>&nbsp; 7.</p>
+                <p>&nbsp; 8.</p>
+                <p>&nbsp; 9.</p>
+                <p>&nbsp; 10.</p>
             </section>
             <section id="P5-happiness">
                 <p>ดัชนีชี้วัดความสุขคนไทย เป็นแบบประเมินความสุขด้วยตนเอง ซึ่งสร้างขึ้นภายใต้กรอบ
@@ -85,6 +99,11 @@
                     const id = entry.target.getAttribute('id');
                     if (entry.intersectionRatio > 0) {
                         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                        if(id=='P2-happiness'){
+                            document.getElementById("video-2").src="https://www.youtube.com/embed/ix_sFS1WlL0?controls=0&autoplay=1"
+                        }else if(id=='P3-happiness'){
+                            document.getElementById("video-3").src="https://www.youtube.com/embed/zS7YrpZMrQ8?controls=0&autoplay=1"
+                        }
                     } else {
                         document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
                     }
