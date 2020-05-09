@@ -23,7 +23,7 @@
 	background-color: #F65832;
 }
 img{
-	z-index: -1;
+	z-index: 0;
 }
 @media screen and (min-width: 1000px) {
 #creator{

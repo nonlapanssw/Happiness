@@ -21,10 +21,14 @@ body, html{
     padding:0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+body{
+    background-color: #FAF3EB;
 }img{
     z-index: -1;
     position: fixed;
     bottom: 0;
+    cursor: auto;
     
 }#happiness{
     margin-top: 0;
@@ -49,6 +53,17 @@ body, html{
     color: #FDC848;
     line-height: 0.3;
     padding-bottom: 10rem;
+}#meaning{
+    font-family: anakotmai;
+    color: #F65832;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #P4-happiness{
     margin: 0;
@@ -67,15 +82,14 @@ hr{
     border: 0.5px solid #F65832;
     width: 20%;
   }
-.video-P2 {
-    padding-bottom: 40%; /* 16:9 */
-    margin-left: 40%;
-    height:50%;
-    width: 50%;
-}.video-P3{
+.video-P3,.video-P2{
     padding-bottom: 45%; /* 16:9 */
     height:50%;
     width: 50%;
+    position: relative;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
 }
 nav{
     position: fixed;

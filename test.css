@@ -20,20 +20,24 @@ body, html{
     margin:0;
     padding:0;
     overflow-y: hidden;
-}
-body{
-    background-color: #F65832;
+    background-color: #FAF3EB;
 }
 img{
     z-index: -1;
     position: fixed;
+    cursor: none;
 }
-#question-frame,#result-score,#previous,#fill-up,#data-user label br{
+#question-frame,#result-score,#previous,#data-user label br{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
 #data-user{
-    margin-top: 5%;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 #data-user div{
     color: #FAF3EB;
@@ -42,7 +46,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     padding: 3% 8%;
-    line-height: 2;
+    line-height: 1.2;
     font-family: anakotmai;
     font-size: 30px;
     border-radius: 10px;
@@ -51,27 +55,26 @@ img{
     font-family: anakotmaibold;
     font-size: 30px;
     color: #00698D;
-    margin-bottom: 1%;
     margin-left: 10%;
 }
 #data-user label{
     margin-left: 5%;
-    font-size: 24px;
+    font-size: 22px;
 }
 #data-user select{
     font-family: anakotmailight;
-    margin-top: 2%;
     font-size: 18px;
-    width: 40%;
+    width: 35%;
     float: right;
-    margin-right: 15%;
+    margin-right: 20%;
     color: #00698D;
-    padding: 0% 2% 0% 2%;
+    padding: 0% 2.5% 0% 2.5%;
     border-radius:10px;
     background-color: #FAF3EB;
 }
 #data-user button{
     font-family: anakotmai;
+    margin-top: 5%;
     font-size: 22px;
     background-color: #F65832;
     color: #FAF3EB;
@@ -79,7 +82,6 @@ img{
     border: none;
     padding: 1% 7%;
     cursor: pointer;
-    margin: 0;
     position: relative;
     left: 50%;
     -ms-transform: translate(-50%);
@@ -202,28 +204,34 @@ img{
     cursor: pointer;
     
 }
+#result-score{
+    margin-top: 50px;
+}
 #result-score span{
-    right: 5%;
+    left: 20%;
+    top: 50%;
     float: right;
     text-align: center;
     padding-top:5%;
     padding-right:5% ;
     position: relative;
     width: 35%;
+    transform: translate(-50%);
+    -ms-transform: translate(-50%);
 }
 #result-score p{
     font-family: anakotmailight;
     font-weight: bolder;
     line-height: 0.6;  
-    color: #FAF3EB;
+    color: #00698D;
 }
 #result-score h3{
     font-family: anakotmai;
     display: inline;
-    color: #FAF3EB;
+    color: #00698D;
 }
 #result-score h2{
-    color: #00698D;
+    color: #F65832;
     display: inline;
     font-family: anakotmai;
 }
@@ -234,18 +242,20 @@ img{
     margin-right: auto; 
 }
 #btn-menu button{
-    margin:5% 3%;
+    margin:1% 3%;
     padding:1% 2% 1% 2%;
     font-size:20px;
     font-family: anakotmai;
-    background-color: #FAF3EB;
-    border: none;
+    background-color: transparent;
+    color: #00698D;
+    border: 3px solid #00698D;
     border-radius: 10px;
     cursor: pointer;
 }
 #btn-menu button:hover{
     transition-duration: 0.5s;
-    opacity: 0.5;
+    color: white;
+    border: 3px solid white;
 }
 .videoWrapper {
     padding-bottom: 45%; /* 16:9 */
