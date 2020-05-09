@@ -20,7 +20,9 @@ body, html{
     margin:0;
     padding:0;
     overflow-y: hidden;
-    background-color: #FAF3EB;
+}
+body{
+    background-color:#FAF3EB;
 }
 img{
     z-index: -1;
@@ -98,6 +100,7 @@ img{
     padding-bottom: 10%; 
     height: 50%;
     width: 90%;
+    
 }
 #question-group{
     padding-top: 5%;

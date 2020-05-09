@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <div id="bg">
     <img style="height: 100%; right:0; top: 30px;"
         src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.5-06.png?alt=media&token=6cd51fa0-44d2-4226-a190-aaacc134aab1"></img>
     <img style="width:100%;  bottom: -70px;"
@@ -19,7 +20,7 @@
         src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.2-06.png?alt=media&token=f1109189-9056-48cd-b360-81f14aa2b5e1"></img>
     <img style="width: 100%; top: -20px"
         src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/6.3-06.png?alt=media&token=7811bd0d-ec25-4089-8de8-50522a62d66e"></img>
-
+    </div>
     <main>
         <nav class="section-nav">
             <ol>
@@ -73,17 +74,45 @@
                 </div>
             </section>
             <section id="P4-happiness">
-                <p>แนวทางการปฏิบัติตน</p>
-                <p>&nbsp; 1.</p>
-                <p>&nbsp; 2.</p>
-                <p>&nbsp; 3.</p>
-                <p>&nbsp; 4.</p>
-                <p>&nbsp; 5.</p>
-                <p>&nbsp; 6.</p>
-                <p>&nbsp; 7.</p>
-                <p>&nbsp; 8.</p>
-                <p>&nbsp; 9.</p>
-                <p>&nbsp; 10.</p>
+                <div class="slideshow-container">
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-01.png?alt=media&token=d54b46ea-f6ea-44c3-9808-b482499eb959" \
+                        >
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-10-2.png?alt=media&token=d12e4673-7e20-4bfe-abc2-0067c04c39cd" 
+                        >
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-03.png?alt=media&token=7a75d3c9-bd1e-4eaf-b589-4814f58fda14" 
+                        >
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-05.png?alt=media&token=6281e544-e2d2-4849-bb01-f8c70f7719dd" 
+                        >
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-06.png?alt=media&token=88af716a-3e04-44dc-9db2-d1e775d597da" 
+                        >
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-07.png?alt=media&token=0d984429-cfde-4405-a133-62d03035bcbe" 
+                        >
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/10HowTo2-02.png?alt=media&token=031874c6-1dc8-487a-988b-38159026bec3" 
+                        >
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
             </section>
             <section id="P5-happiness">
                 <p>ดัชนีชี้วัดความสุขคนไทย เป็นแบบประเมินความสุขด้วยตนเอง ซึ่งสร้างขึ้นภายใต้กรอบ
@@ -136,6 +165,29 @@
 
         });
     </script>
+
+<script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
+
 </body>
 
 </html>

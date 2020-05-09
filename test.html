@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id='bg-selected'>
+    <div id='bg-selected' >
         <img style="width: 100%; "
             src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/3.1-03.png?alt=media&token=68ef299a-90a9-4242-9459-025a26dbdd60">
         <img style="height: 90%; bottom: 0px; right: 0;"
@@ -76,8 +76,23 @@
         <p id=fill-up style="visibility:hidden; color: black; font-size: 18px; margin-left: 0;text-align: center;">
             กรุณากรอกให้ครบค่ะ</p>
     </div>
-
+    <div id="bg-question" style="display: none;">
+        <img style="width: 80%; bottom:0px;left: 0px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.3-04.png?alt=media&token=30fb589e-fc94-421a-9fc4-676d94f3ffe1" />
+        <img style="width: 70%; bottom:0px;right: 0px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.1-04.png?alt=media&token=0ff2a7f4-1de8-4882-8a78-b7bcb282341a" />
+        <img style="width: 100%; bottom:-50px; right: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.4-04.png?alt=media&token=611591a0-5ff5-4b26-8ffc-27f1ff9b3898" />
+        <img style="width: 80%; top:-50px; right: 0px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.2-04.png?alt=media&token=7f7fa8d8-ed60-41aa-9f29-bd97324084d9" />
+        <img style="width: 100%; top:-50px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.5-04.png?alt=media&token=2f06fac7-247e-4ae3-b34d-e8bc2ae24d94" />
+        <img style="width: 100%; top:-50px;"
+        src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.6-04.png?alt=media&token=ca7661ff-80b8-4740-a5fe-4f5f156d0f1a" />
+        
+    </div>
     <div id="question-frame">
+        
         <div id="question-group">
             <div id="number-question">
                 <p id="number">1</p>
@@ -198,7 +213,9 @@
             } else {
                 document.getElementById("data-user").style.display = "none";
                 document.getElementById("question-frame").style.display = "block";
+                document.getElementById("bg-question").style.display = "block";
                 document.getElementById("bg-selected").style.display = "none";
+                document.body.style.backgroundColor = "#F65832";
             }
         }
 
@@ -259,6 +276,10 @@
             var firebaseRef = firebase.database().ref("User");
             firebaseRef.child(Date.now()).set(data)
             document.getElementById("question-frame").style.display = 'none'
+            document.getElementById("bg-question").style.display = "none";
+            document.body.style.backgroundColor = "#FAF3EB";
+
+            
             document.getElementById("result-score").style.display = 'block';
             document.getElementById("point").innerHTML = sum
             if (sum <= 43) {
