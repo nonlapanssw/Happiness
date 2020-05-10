@@ -21,13 +21,14 @@ body, html{
 	padding:0;
 	overflow-y: hidden;
 }
+#player {
+	padding-bottom: 45%; /* 16:9 */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
 @media screen and (min-width: 1000px){
-	#player {
-		padding-bottom: 45%; /* 16:9 */
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
+	
 #HAPPINESS{
 	position: fixed;
 	font-family:anakotmai;

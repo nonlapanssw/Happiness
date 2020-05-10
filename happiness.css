@@ -122,14 +122,18 @@ body{
     margin-top: 5%;
     font-family:anakotmai;
     text-align: center;
-    color: #00698D;
-    font-size: 20px;
+    color: #F65832;
+    font-size: 22px;
     padding-bottom: 8rem;
 }
 hr{
     border: 0.5px solid #F65832;
     width: 20%;
-  }
+}
+#P5-happiness hr{
+    border: 1px solid #FDC848;
+    width: 30%;
+}
 .video-P3,.video-P2{
     padding-bottom: 45%; /* 16:9 */
     height:50%;

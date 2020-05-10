@@ -7,7 +7,7 @@
 
 <body>
     <div id="player"></div>
-    <div id="btn-test">
+    <div id="btn-test" >
         <button onclick="location.href='/main-test.html';">เริ่มทำแบบทดสอบ</button>
     </div>
     <script src="https://www.youtube.com/player_api"></script>
@@ -15,7 +15,7 @@
         var player;
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('player', {
-                videoId: 'c39PnLnvI1A',
+                videoId: 'wC3d9bTCrkU',
                 events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange,
@@ -23,7 +23,7 @@
                 },
                 playerVars: {
                     'autoplay': 0,
-                    'controls': 0,
+                    'controls': 1,
                     'rel': 0,
                     'showinfo': 0,
                     'cc_load_policy': 3,
@@ -41,6 +41,7 @@
         function onPlayerStateChange(event) {
             if (event.data === 0) {
                 document.getElementById("btn-test").style.display = 'block';
+                
             }
         }
     </script>
