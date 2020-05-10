@@ -15,9 +15,10 @@
         var player;
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('player', {
-                videoId: 'aND-QiSjFSc',
+                videoId: 'c39PnLnvI1A',
                 events: {
                     'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange,
                     
                 },
                 playerVars: {
@@ -36,12 +37,12 @@
             event.target.playVideo();
         }
 
-        // when video ends  'onStateChange': onPlayerStateChange
-        //function onPlayerStateChange(event) {
-          //  if (event.data === 0) {
-            //    document.getElementById("btn-test").style.display = 'block';
-            //}
-        //}
+        // when video ends  
+        function onPlayerStateChange(event) {
+            if (event.data === 0) {
+                document.getElementById("btn-test").style.display = 'block';
+            }
+        }
     </script>
 </body>
 

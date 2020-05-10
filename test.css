@@ -29,7 +29,7 @@ img{
     position: fixed;
     cursor: none;
 }
-#question-frame,#result-score,#previous,#data-user label br{
+#question-frame,#previous,#data-user label br{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
