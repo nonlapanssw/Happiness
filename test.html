@@ -101,14 +101,14 @@
                 <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
             </div>
             <form id="score" action="/action_page.php">
-                <input type="radio" id="score4" name="score" onclick="collectScore(this.value)" value="4">
-                <label for="score4">มากที่สุด</label><br>
+                <input type="radio" id="score4" name="score" onclick="collectScore(this.value)" value="4" checked>
+                <label id="label4" for="score4">มากที่สุด</label><br>
                 <input type="radio" id="score3" name="score" onclick="collectScore(this.value)" value="3">
-                <label for="score3">มาก</label><br>
+                <label id="label3" for="score3">มาก</label><br>
                 <input type="radio" id="score2" name="score" onclick="collectScore(this.value)" value="2">
-                <label for="score2">เล็กน้อย</label><br>
+                <label id="label2" for="score2">เล็กน้อย</label><br>
                 <input type="radio" id="score1" name="score" onclick="collectScore(this.value)" value="1">
-                <label for="score1">ไม่เลย</label><br>
+                <label id="label1" for="score1">ไม่เลย</label><br>
             </form>
         </div>
 
@@ -129,17 +129,27 @@
         <img style="height: 80%; top: 100px; left: 120px;"
             src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/5.1-05.png?alt=media&token=c1f7f74f-9353-4ddc-801c-be927ef80a5c"></img>
 
-        <div class="videoWrapper">
-            <iframe id="video" height="400" width="700" src="" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-
-            <div id="btn-menu">
-                <button onclick="location.href='/main-test.html';">กลับไปหน้าแบบทดสอบ</button>
-                <button onclick="location.href='/happiness.html';">ข้อมูลเกี่ยวกับความสุข</button>
+        <div id="result-analyze">
+            <h3>ขอบคุณที่เข้าร่วมการประเมิน แบบทดสอบความสุข</h3><br>
+            <h2>คุณได้คะแนนรวม </h2>
+            <h2 id=point></h2>
+            <h2> คะแนน</h2>
+            <br>
+            <h3>การแปลผลการประเมิน</h3><br>
+            <h2 id="analysis"></h2><br>
+            <div class="videoWrapper">
+                <iframe id="video" height="390" width="690" src="" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe><br>
+                <div id="btn-menu">
+                    <button onclick="location.href='/main-test.html';">กลับไปหน้าแบบทดสอบ</button>
+                    <button onclick="location.href='/happiness.html';">ข้อมูลเกี่ยวกับความสุข</button>
+                </div>
             </div>
         </div>
-        <span>
+
+
+        <span style="display: none;">
             <h3>ขอบคุณที่เข้าร่วมการประเมิน</h3><br>
             <h3>แบบทดสอบความสุข</h3><br><br>
             <h2>คุณได้คะแนนรวม </h2>
@@ -166,7 +176,6 @@
 
 
     <script>
-        var data = { sex: "", age: "", education: "", career: "", status: "", score: "" };
         var number = 1
         var point = []
         var questions = ["ท่านรู้สึกพึงพอใจในชีวิต", "ท่านรู้สึกสบายใจ",
@@ -218,6 +227,33 @@
                 document.getElementById("result").style.display = 'block'
                 document.getElementById("next").style.display = 'none'
             }
+            var labels = document.getElementsByTagName('label'), l, label;
+
+            if (score == 4) {
+                document.getElementById('label4').style.color = "#F7AB37";
+                document.getElementById('label3').style.color = "#FAF3EB";
+                document.getElementById('label2').style.color = "#FAF3EB";
+                document.getElementById('label1').style.color = "#FAF3EB";
+            } else if (score == 3) {
+                document.getElementById('label4').style.color = "#FAF3EB";
+                document.getElementById('label3').style.color = "#F7AB37";
+                document.getElementById('label2').style.color = "#FAF3EB";
+                document.getElementById('label1').style.color = "#FAF3EB";
+            } else if (score == 2) {
+                document.getElementById('label4').style.color = "#FAF3EB";
+                document.getElementById('label3').style.color = "#FAF3EB";
+                document.getElementById('label2').style.color = "#F7AB37";
+                document.getElementById('label1').style.color = "#FAF3EB";
+            } else if (score == 1) {
+                document.getElementById('label4').style.color = "#FAF3EB";
+                document.getElementById('label3').style.color = "#FAF3EB";
+                document.getElementById('label2').style.color = "#FAF3EB";
+                document.getElementById('label1').style.color = "#F7AB37";
+            }
+
+
+
+
         }
         function next() {
             number++
@@ -226,6 +262,10 @@
                 document.getElementById("number").innerHTML = number
                 document.getElementById("next").style.display = 'none'
             }
+            document.getElementById('label4').style.color = "#FAF3EB";
+            document.getElementById('label3').style.color = "#FAF3EB";
+            document.getElementById('label2').style.color = "#FAF3EB";
+            document.getElementById('label1').style.color = "#FAF3EB";
         }
         function user() {
             document.getElementById("explanation").style.display = "none";

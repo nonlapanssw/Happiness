@@ -45,9 +45,8 @@ img{
     }
     #main-test p{
         font-family:anakotmailight;
-        font-weight: bold;
         padding-right: 5%; 
-        line-height: 1.5;
+        line-height: 0.5;
         font-size: 20px;
     }#main-test h1{
         font-size: 35px;
@@ -56,15 +55,17 @@ img{
         margin: 0;
     }
     #main-test button{
+        margin-top: 5%;
+        margin-bottom: 8%;
         margin-right: 5%;
         font-family:anakotmai;
         color: #F7AB37;
-        font-size: 20px;
+        font-size: 24px;
         border: #FAF3EB 0.5px solid;
         background: none;
-        border-radius: 4px;
+        border-radius: 50px;
         cursor: pointer;
-        padding: 0.5% 1% ;
+        padding: 1% 2% ;
         position: relative;
         letter-spacing: 2px;
     }
