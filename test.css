@@ -57,7 +57,7 @@ img{
     font-family: anakotmaibold;
     font-size: 30px;
     color: #00698D;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 #data-user label{
     margin-left: 5%;
@@ -175,7 +175,7 @@ img{
 #page{
     position: absolute;
     width: 100%;
-    bottom: 4%;
+    bottom: 15%;
 }
 #previous{
     float: left;
@@ -198,9 +198,9 @@ img{
     display: none;
     font-family: anakotmai;
     font-size: 24px;
-    background-color:#188AB6;
+    color:#FAF3EB;
     padding:1% 2% 1% 1%;
-    color: #FAF3EB;
+    background-color: #F65832;
     border: none;
     border-top-left-radius:20px ;
     border-bottom-left-radius: 20px;
@@ -379,13 +379,14 @@ img{
         color: #F65832;
     }
     #page{
-        position: relative;
-        padding: 10%;
-        margin-top: 90%;
+        position: absolute;
+        bottom: 200%;
+        width: 100%;
     }
     #previous{
         font-size: 20px;
         float: left;
+        left: 0;
         font-family: anakotmai;
         color:#188AB6;
         padding:4%;
@@ -395,6 +396,7 @@ img{
     }
     #result{
         border-radius: 10px;
+        right: 0;
         float: right;
         display: none;
         font-family: anakotmai;
