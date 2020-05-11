@@ -45,6 +45,7 @@ img{
     }
     #main-test p{
         font-family:anakotmailight;
+        font-weight: bold;
         padding-right: 5%; 
         line-height: 1.5;
         font-size: 20px;
