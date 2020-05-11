@@ -10,7 +10,7 @@
 <body>
   <div id="player"></div>
   <p id="HAPPINESS">HAPPINESS</p>
-  <button id="btn-enter" onclick="enter()">START</button>
+  <p>press space bar for entering</p>
 
   <script src="https://www.youtube.com/player_api"></script>
   <script>
@@ -43,15 +43,21 @@
         player.loadVideoById({
           videoId: 'AS01YCq0e4c'
         })
-      }}
-
-
-
-      function enter() {
-        location.href = '/video.html';
-        document.getElementById.player.videoId = "";
-
       }
+    }
+
+    const log = document.getElementById('HAPPINESS');
+
+    document.addEventListener('keypress', logKey);
+
+    function logKey(e) {
+      location.href = '/video.html';
+      document.getElementById.player.videoId = "";
+    }
+
+
+
+
   </script>
 </body>
 

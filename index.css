@@ -35,44 +35,28 @@ body, html{
 	font-style: normal;
 	font-weight: 600;
 	font-size: 165px;
-	align-items: center;
-	text-align: center;
 	letter-spacing: 0.1em;
 	color: #FEB954;
-	margin-left: 10%;
-	margin-bottom:0% ;
-}
-#btn-enter{
+	position: fixed;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}p{
 	position: fixed;
 	font-family:anakotmai;
-	display: block;
-	margin-left: 40%;
-	margin-top: 30%;
-	width: 20%;
-	background: #EC6665;
-	border-radius: 20px;
 	font-style: normal;
-	font-weight: 300;
-	line-height: 100%;
-	padding: 1%;
-	font-size: 36px;
-	align-items: center;
-	color: #FDF3DD;
-	border: none;
-	cursor: pointer;
+	font-size: 24px;
+	letter-spacing: 0.1em;
+	color: #F65832;
+	position: fixed;
+	top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-#btn-enter:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    background-color: #FDF3DD;
-	color: #EC6665;
-	cursor: pointer;
-	width: 21%;
-	transition-duration: 0.4s;
 }
-#btn-enter:active {
-    background-color: #EC6665;
-    color:#FDF3DD;
-}}
 @media screen and (max-width: 1000px){
 	#btn-header{
 		display: none;

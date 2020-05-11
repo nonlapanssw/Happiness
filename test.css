@@ -22,77 +22,17 @@ body, html{
     overflow-y: hidden;
 }
 body{
-    background-color:#FAF3EB;
+    background-color:#F65832;
 }
 img{
     z-index: -1;
     position: fixed;
     cursor: none;
 }
-#question-frame,#result-score,#previous,#data-user label br{
+#result-score,#data-user{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
-#data-user{
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-#data-user div{
-    color: #FAF3EB;
-    background-color: #00698D;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3% 8%;
-    line-height: 1.2;
-    font-family: anakotmai;
-    font-size: 30px;
-    border-radius: 10px;
-}
-#data-user p{
-    font-family: anakotmaibold;
-    font-size: 30px;
-    color: #00698D;
-    margin-left: 15%;
-}
-#data-user label{
-    margin-left: 5%;
-    font-size: 22px;
-}
-#data-user select{
-    font-family: anakotmailight;
-    font-size: 18px;
-    width: 35%;
-    float: right;
-    margin-right: 20%;
-    color: #00698D;
-    padding: 0% 2.5% 0% 2.5%;
-    border-radius:10px;
-    background-color: #FAF3EB;
-}
-#data-user button{
-    font-family: anakotmai;
-    margin-top: 5%;
-    font-size: 22px;
-    background-color: #F65832;
-    color: #FAF3EB;
-    border-radius:4px;
-    border: none;
-    padding: 1% 7%;
-    cursor: pointer;
-    position: relative;
-    left: 50%;
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
-}
-#data-user button:hover{
-    transition-duration: 0.5s;
-    opacity: 0.5;
-}
 #question-frame{
     position: absolute;
     margin: 5%;
@@ -177,38 +117,22 @@ img{
     width: 100%;
     bottom: 15%;
 }
-#previous{
-    float: left;
-    font-family: anakotmai;
-    font-size: 24px;
-    color:#188AB6;
-    padding:1% 1% 1% 2%;
-    background-color: #FAF3EB;
-    border: none;
-    border-top-right-radius:20px ;
-    border-bottom-right-radius: 20px;
-    cursor: pointer;
-}
-#previous:hover,#result:hover{
+#page button:hover{
     transition-duration: 0.4s;
     opacity: 0.5;
 }
-#result{
+#page button{
     float: right;
     display: none;
     font-family: anakotmai;
     font-size: 24px;
     color:#FAF3EB;
-    padding:1% 2% 1% 1%;
+    padding:1% 6% 1% 1%;
     background-color: #F65832;
     border: none;
-    border-top-left-radius:20px ;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius:15px ;
+    border-bottom-left-radius: 15px;
     cursor: pointer;
-    
-}
-#result-score{
-    margin-top: 50px;
 }
 #result-score span{
     left: 20%;
