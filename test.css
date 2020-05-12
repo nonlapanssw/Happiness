@@ -151,7 +151,7 @@ img{
     display: inline;
     font-family: anakotmai;
 }#result-analyze{
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     line-height: 1.5;
 }
@@ -170,12 +170,10 @@ img{
     border: 2px solid #00698D;
     border-radius: 50px;
     cursor: pointer;
-    
 }
 #btn-menu button:hover{
     transition-duration: 0.5s;
-    color: white;
-    border: 2px solid white;
+    opacity: 0.2;
 }
 .videoWrapper {
     padding-bottom: 45%; /* 16:9 */
