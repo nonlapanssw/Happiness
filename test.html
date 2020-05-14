@@ -10,73 +10,6 @@
 </head>
 
 <body>
-
-    <div id="data-user">
-        <div id='bg-selected'>
-            <img style="width: 100%; "
-                src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/3.1-03.png?alt=media&token=68ef299a-90a9-4242-9459-025a26dbdd60">
-            <img style="height: 90%; bottom: 0px; right: 0;"
-                src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/3.4-03.png?alt=media&token=a2eae320-e5d9-4c9e-af41-f6d44cf4b354">
-            <img style="height: 95%; right: 0;"
-                src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/3.3-03.png?alt=media&token=fcc70489-6973-43d5-a76a-b986af15fe5b">
-            <img style="width:  95%; top: 50px; right: -50px;"
-                src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/3.2-03.png?alt=media&token=e780cf13-bcb3-4427-b761-b33d511c8595">
-            <img style="height: 100%; "
-                src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/3.5-03.png?alt=media&token=1fe0a482-9c92-46e4-a948-dd732397f18f">
-        </div>
-        <p>กรุณาระบุรายละเอียดของคุณ ให้ครบด้วยค่ะ</p>
-        <div>
-            <label for="sex">เพศ :<br></label>
-            <select id="sex" onclick="sex(this.value)">
-                <option selected>กรุณาเลือก</option>
-                <option value="male">ชาย</option>
-                <option value="female">หญิง</option>
-            </select>
-            <br>
-            <label for="age">อายุ :<br></label>
-            <select id="age" onclick="age(this.value)">
-                <option selected>กรุณาเลือก</option>
-                <option value="0-12">0-12 ปี</option>
-                <option value="13-19">13-19 ปี</option>
-                <option value="20-25">20-25 ปี</option>
-                <option value="26-39">26-39 ปี</option>
-                <option value="40-59">40-59 ปี</option>
-                <option value="60up">60 ปีขึ้นไป</option>
-            </select>
-            <br>
-            <label for="education">ระดับการศึกษา :<br></label>
-            <select id="education" onclick="education(this.value)">
-                <option selected>กรุณาเลือก</option>
-                <option value="primary">ประถมศึกษา</option>
-                <option value="highschool">มัธยมศึกษา</option>
-                <option value="vocational">ปวช / ปวส / อนุปริญญา</option>
-                <option value="bachelor">ปริญญาตรี</option>
-                <option value="master-up">ปริญญาโท / เอก</option>
-            </select>
-            <br>
-            <label for="career">อาชีพ :<br></label>
-            <select id="career" onclick="career(this.value)">
-                <option selected>กรุณาเลือก</option>
-                <option value="student">นักเรียน / นิสิต / นักศึกษา</option>
-                <option value="freelance">ค้าขาย / รับจ้าง / ธุรกิจส่วนตัว</option>
-                <option value="employee">พนักงานบริษัท / ห้างร้าน</option>
-                <option value="civil-service">รับราชการ / รัฐวิสาหกิจ</option>
-                <option value="house-worker">งานบ้าน</option>
-            </select>
-            <br>
-            <label for="marital-status">สถานภาพการสมรส :<br></label>
-            <select id="marital-status" onclick="status(this.value)">
-                <option selected>กรุณาเลือก</option>
-                <option value="single">โสด</option>
-                <option value="married">คู่</option>
-                <option value="widow">พ่อหม้าย/แม่หม้าย</option>
-                <option value="divorce">หย่าร้าง</option>
-            </select><br>
-            <button onclick="enterToTest()">เริ่มทำแบบทดสอบ</button>
-        </div>
-        <p id=fill-up style="visibility:hidden; color: black; font-size: 18px; margin-left: 0;text-align: center;">
-            กรุณากรอกให้ครบค่ะ</p>
-    </div>
     <div id="bg-question">
         <img style="width: 80%; bottom:0px;left: 0px;"
             src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.3-04.png?alt=media&token=30fb589e-fc94-421a-9fc4-676d94f3ffe1" />
@@ -90,19 +23,30 @@
             src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.5-04.png?alt=media&token=2f06fac7-247e-4ae3-b34d-e8bc2ae24d94" />
         <img style="width: 100%; top:-100px;"
             src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/4.6-04.png?alt=media&token=ca7661ff-80b8-4740-a5fe-4f5f156d0f1a" />
-
     </div>
-   
+    <div id="bg-question-mobile">
+        <img style="width: 100%; top:0px;left: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/mobile%2Fmobile1-04.png?alt=media&token=366e9175-6155-41d7-9af8-841be5c9060a" />
+        <img style="width: 100%; top:0px;right: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/mobile%2Fmobile4-04.png?alt=media&token=6873133c-7f99-491c-a56f-bb4b2aeed1c4" />
+        <img style="width: 100%; bottom:0px;right: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/mobile%2Fmobile6-04.png?alt=media&token=e59395f1-1b49-4474-9616-0da74bbc37f4" />
+            <img style="width: 100%; bottom:0px;right: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/mobile%2Fmobile5-04.png?alt=media&token=d5f9e8a9-1171-4b1a-963b-e93e2a3be709" />
+        
+            <img style="width: 100%; top:0px;left: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/mobile%2Fmobile2-04.png?alt=media&token=2b2aaa6f-8de1-4921-9f19-c8c9a06409ec" />
+        <img style="width: 100%; bottom:0px;left: 0px;"
+            src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/mobile%2Fmobile3-04.png?alt=media&token=e078262a-73b5-4d98-ae07-1eaa46a81de8" />
+    </div>
+
     <div id="question-frame">
+        <div id="list-of-number">
+            <p id="number">1 | 15</p>
+        </div>
         <div id="question-group">
             <div id="number-question">
                 <p id="question">ท่านรู้สึกพึงพอใจในชีวิต</p>
-            </div>
-
-            <div style="text-align: center;top: 3%; right: 3%; position: fixed; line-height: 0.4; font-size: 24px;color: #00698D; ">
-                <p id="number" >1</p>
-                <hr style="width: 40px; height: 2px;border:solid 1px#00698D; background-color:#00698D;">
-                <p>15</p>
             </div>
             <form id="score" action="/action_page.php">
                 <input type="radio" id="score4" name="score" onclick="collectScore(this.value)" value="4" checked>
@@ -257,7 +201,7 @@
             number++
             if (number <= 15) {
                 document.getElementById("question").innerHTML = questions[number - 1]
-                document.getElementById("number").innerHTML = number
+                document.getElementById("number").innerHTML = number + " | 15"
                 document.getElementById("next").style.display = 'none'
             }
             document.getElementById('label4').style.color = "#FAF3EB";
