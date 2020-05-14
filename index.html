@@ -37,12 +37,18 @@
     function onPlayerReady(event) {
       player.setPlaybackQuality('hd1080');
       event.target.playVideo();
+
     }
     function onPlayerStateChange(event) {
       if (event.data === 0) {
-        player.loadVideoById({
-          videoId: 'AS01YCq0e4c'
-        })
+        if (document.body.clientWidth < 1000) {
+          location.href = '/video.html';
+          document.getElementById.player.videoId = "";
+        } else {
+          player.loadVideoById({
+            videoId: 'AS01YCq0e4c'
+          })
+        }
       }
     }
 
