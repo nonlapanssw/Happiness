@@ -24,7 +24,6 @@ body, html{
 }
 img{
     z-index: -1;
-    cursor: none;
 }@media screen and (min-width: 1000px) {
     #main-test{
         position: absolute;
@@ -72,35 +71,28 @@ img{
     #main-test button:hover{
         transition-duration: 0.5s;
         opacity: 0.5;
-    }
+    }#main-test .tooltip{
+        position: fixed;
+        right: 2%;
+        top: 4%;
+        cursor: pointer;
+    }#main-test .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 600px;
+    right: 110%;
+    padding: 5%;
+    color: #F65832;
+    background-size: 600px 100%;
+    background-repeat: no-repeat;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/info3.2-01.png?alt=media&token=94d98e3a-cda3-488e-8eba-ef59459f0f1d");
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+      }#main-test .tooltip:hover .tooltiptext{
+        visibility: visible;
+      }
 }
     
     @media screen and (max-width: 1000px) {
-        #main-test{
-            font-size: 14px;
-            text-align: center;
-            padding: 10%; 
-            position: absolute;
-            color: #FAF3EB;
-        }
-        #main-test p{
-            text-align: center;
-            font-family:anakotmailight;
-            font-size: 13px;
-            line-height: 2;
-            color: black;
-        }
-        #main-test button{
-            margin-right: 5%;
-            font-family:anakotmai;
-            color: #F7AB37;
-            font-size: 20px;
-            border: #F7AB37 0.5px solid;
-            background: none;
-            border-radius: 4px;
-            cursor: pointer;
-            padding: 0.5% 1% ;
-            position: relative;
-            letter-spacing: 2px;
-        }
+        
     }

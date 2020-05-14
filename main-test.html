@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="/main-test.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,15 +21,35 @@
     <img style="position: fixed; height: 100%; bottom: 0px;"
         src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/webdeeeeesign-01.png?alt=media&token=d5300d03-c0b5-4ca9-b58d-3294c2eb4764"></img>
     <div id="main-test">
-        <h1>แบบทดสอบดัชนีชี้วัดความสุขคนไทยฉบับสั้น 15 ข้อ</h1>
+        <div class="tooltip"><img id="small" style="height: 30px;"
+                src="https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/infor-01.png?alt=media&token=36cf1be0-bafe-4738-8ef5-3e4d5c31bfec" />
+            <span class="tooltiptext" style="padding:10%; ">
+                <h1 style="text-align: center;line-height: 0.5; margin-top:5%;">คำชี้แจง</h1>
+                <p style="line-height: 1.5; font-size: 16px; text-align: center; font-family: anakotmai; ">
+                    คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่าน<br>
+                    ในช่วง 1 เดือนที่ผ่านมาจนถึงปัจจุบัน ให้ท่านสำรวจตัวท่านเอง<br>
+                    และประเมินเหตุการณ์อาการหรือความคิดเห็นและ<br>
+                    ความรู้สึกของท่านว่าอยู่ในระดับใดโดยคำตอบจะมี 4 ตัวเลือก คือ</p>
+                <p style="line-height: 1.5; padding-left: 15%; font-size: 14px; text-align: left; font-family: anakotmai;">
+                    มากที่สุด หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; หรือเห็นด้วยกับเรื่องนั้น ๆ มากที่สุด<br>
+                    มาก หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มาก<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;หรือเห็นด้วยกับเรื่องนั้น ๆ มาก<br>
+                    เล็กน้อย หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อย<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;หรือเห็นด้วยกับเรื่องนั้น ๆ เพียงเล็กน้อย<br>
+                    ไม่เลย หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;หรือไม่เห็นด้วยกับเรื่องนั้น
+                    ๆ </p>
+            </span>
+        </div>
+        <h1>แบบประเมินดัชนีชี้วัดความสุขคนไทยฉบับสั้น</h1>
         <h1>Thai Happiness Indicator (TMHI-15)</h1>
         <h2>กรุณาเลือกคำตอบในช่องที่มีข้อความตรงกับท่านมากที่สุด</h2>
-        <button onclick="location.href='/test.html';">เข้าสู่ทำแบบทดสอบ</button>
+        <button onclick="location.href='/test.html';">เริ่มทำแบบประเมิน</button>
         <p>ไม่ใช่เครื่องมือในการวินิจฉัยโรค</p>
         <p> ที่มา : กรมสุขภาพจิต กระทรวงสาธารณสุข</p>
     </div>
 
-    
+
 </body>
 
 </html>

@@ -27,7 +27,6 @@ body{
 img{
     z-index: -1;
     position: fixed;
-    cursor: none;
 }
 #data-user,#result-score{
 	display: none;
@@ -43,15 +42,17 @@ img{
 }
 #question-group{
     padding-top: 5%;
+    display: inline;
 }#question-group br,.topnav{
     display: none;
 }
 #number-question{
     background-color: white;
-    padding: 2% 4% 2% 4%;
+    padding: 2% 4%;
     border-radius: 50px;
     width: 80%;
     margin: auto;
+    margin-top: 8%;
     text-align: center;
 }
 #number-question p{
@@ -66,6 +67,7 @@ img{
     text-align: center;
     font-size: 32px;
     color: #FAF3EB;
+    z-index: 1;
 }
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -178,222 +180,51 @@ img{
 .videoWrapper {
     padding-bottom: 45%; /* 16:9 */
     text-align: center;
-}.tooltip {
+}#explan .tooltip{
+        position: fixed;
+        right: 3%;
+        top: 3%;
+    }#explan .tooltip .tooltiptext {
+        visibility: hidden;
+    width: 600px;
+    right: 110%;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+      }#explan .tooltip:hover .tooltiptext{
+        visibility: visible;
+      }
+#result-score .tooltip {
     position: fixed;
     top: 3%;
     right: 5%;
     display: inline-block;
     border-bottom: 1px dotted black;
-  }
+    cursor: pointer;
+    }
   
-  .tooltip .tooltiptext {
+  #result-score .tooltip .tooltiptext {
+    font-family: anakotmailight;
+    font-weight: bolder;
+    font-size: 16px;
+    color: #F65832;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/info2-01.png?alt=media&token=0dfb827a-bccb-4409-b9a5-f41d138bda1a");
     visibility: hidden;
-    width: 400px;
-    background-color:#FAF3EB;
-    color: #00698D;
+    width: 500px;
     line-height: 0.6;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px 5px;
     right: 105%;
-  
+    background-size: 500px 100%;
+    background-repeat: no-repeat;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
   }
-  .tooltip:hover .tooltiptext {
+  
+  #result-score .tooltip:hover .tooltiptext{
     visibility: visible;
+    transition-duration: 0.4s;
   }
-}
-
-@media screen and (max-width: 1000px) {
-    #data-user{
-        padding: 4%;
-    }
-    #data-user div{
-        color: #000000;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        font-family: anakotmai;
-        font-size: 16px;
-        border-radius: 10px;
-        line-height: 1.5;
-        text-align: center;
-    }
-    #data-user p{
-        font-size: 18px;
-        color: black;
-        text-align: center;
-        margin: 2%;
-    }
-    #data-user label br{
-        display: block;
-    }
-    #data-user select{
-        font-family: anakotmailight;
-        font-size: 18px;
-        width: 100%;
-        color: #188AB6;
-        padding: 1% 9% 1% 9%;
-        border-radius:10px;
-        background-color: #FAF3EB;
-        margin-bottom: 5%;
-    }
-    #data-user button{
-        font-family: anakotmai;
-        font-size: 26px;
-        background-color: transparent;
-        color: #F65832;
-        border-radius:10px;
-        border: #F65832 0.5px solid;
-        padding: 1% 5% 1% 5%;
-        margin-top: 10%;
-    }
-    #number-question{
-        background-color: white;
-        padding: 2% 4% 2% 4%;
-        border-radius: 20px;
-        width: 80%;
-        margin: auto;
-        text-align: center;
-        margin-top: 5%;
-    }
-    #number-question p{
-        display: inline;
-        color: #F65832;
-        font-size: 24px;
-    }
-    #score{
-        left: 30%;
-        margin-top: 5%;
-        width: 90%;
-        position: absolute;
-        font-size: 25px;
-        color: #FAF3EB;
-        line-height: 3;
-    }
-    [type="radio"]:checked,
-    [type="radio"]:not(:checked) {
-        position: absolute;
-        left: -9999px;
-    }
-    [type="radio"]:checked + label,
-    [type="radio"]:not(:checked) + label
-    {
-        position: relative;
-        padding-left: 10%;
-        line-height: 20px;
-        display: inline-flex;
-        color: #FAF3EB;
-    }
-    [type="radio"]:checked + label::after,
-    [type="radio"]:not(:checked) + label::after
-    {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 18px;
-        height: 18px;
-        border: 3px solid ;
-        border-radius: 100%;
-        background: #F65832;
-    }
-    [type="radio"]:not(:checked) + label:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 18px;
-        height: 18px;
-        border: 3px solid #FAF3EB;
-        border-radius: 100%;
-        background: none;
-    }[type="radio"]:checked + label:hover,
-    [type="radio"]:not(:checked) + label:hover {
-        color: #F65832;
-    }
-    #page{
-        position: absolute;
-        bottom: 200%;
-        width: 100%;
-    }
-    #previous{
-        font-size: 20px;
-        float: left;
-        left: 0;
-        font-family: anakotmai;
-        color:#188AB6;
-        padding:4%;
-        background-color: #FAF3EB;
-        border: none;
-        border-radius: 10px;
-    }
-    #result{
-        border-radius: 10px;
-        right: 0;
-        float: right;
-        display: none;
-        font-family: anakotmai;
-        font-size: 20px;
-        background-color:#188AB6;
-        padding:4%;
-        color: #FAF3EB;
-        border: none;
-    }     
-    #result-score{
-        text-align: center;
-    }
-    #result-score span{
-    padding: 3%;
-    position: relative;
-    font-size: 14px;
-}
-#result-score p{
-    font-family: anakotmailight;
-    font-weight: bolder;
-    line-height: 0.5;  
-    color: #188AB6;
-    font-size: 12px;
-}
-#result-score h3{
-    font-size: 16px;
-    font-family: anakotmai;
-    display: inline;
-    color: #188AB6;
-}
-#result-score h2{
-    font-size: 18px;
-    color: #F65832;
-    display: inline;
-    font-family: anakotmai;
-}
-#btn-menu{
-    display: none;
-    position: sticky;
-    padding-top:2%;
-    margin-left:auto;
-    margin-right: auto; 
-}
-#btn-menu button{
-    margin:0% 2% 0% 2%;
-    padding:1% 2% 1% 2%;
-    font-size:20px;
-    font-family: anakotmai;
-    color: #188AB6;
-    background-color: #FAF3EB;
-    border: none;
-    border-radius: 10px;
-}
-#btn-menu button:hover{
-    transition-duration: 0.5s;
-    opacity: 0.5;
-}
-.videoWrapper {
-    padding: 3%; /* 16:9 */
-    text-align: center;
-    height: 10%;
-    width: 30%;
-}
 }
