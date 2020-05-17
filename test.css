@@ -225,8 +225,7 @@ body{
 }
 @media screen and (max-width: 1000px) {
     #bg-question,#result-score{
-        display: none;
-    } 
+        display: none;}
     #page{
         position: absolute;
         width: 100%;
@@ -338,6 +337,7 @@ body{
         margin-top: 40%;
         text-align: center;
         line-height: 1.4;
+        z-index: 0;
     }
     #btn-menu{
         display: inline;
@@ -370,10 +370,10 @@ body{
         z-index: 1;
     }/* The Modal (background) */
 .modal {
+    position: absolute;
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    padding-top: 5%;
     bottom: 0;
     overflow-y: hidden; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -383,27 +383,27 @@ body{
 
 /* Modal Content */
 .modal-content {
-    color: #F7AB37;
-    background-color: #F65832;
-    margin:2%;
-    padding: 30px 30px 60px 30px;
+    margin: 2%;
+    background-color: #F7AB37;
+    color: #F65832;
+    padding: 30px;
+    padding-top: 170px;
     border: 1px solid #888;
     width: 80%;
-    font-size: 12px;
     height: 100%;
-    z-index: 0;
+    text-align: center;
+    line-height: 2;
 }
 .modal-content img{
   z-index: 0;
   position: fixed;
 }
-
 /* The Close Button */
 .close {
   position: absolute;
-  top:4%;
+  top:2%;
   right: 6%;
-color: #F65832;
+color: #FAF3EB;
 float: right;
 font-size: 36px;
 font-weight: bold;
