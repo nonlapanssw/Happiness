@@ -341,12 +341,11 @@ body{
     }
     #btn-menu{
         display: inline;
-        top: 40%;
     }   
     #btn-menu button{
         position: relative;
-        margin:4% ;
-        padding:1%;
+        margin:10% 3% ;
+        padding:1.5%;
         font-size:14px;
         font-family: anakotmai;
         background-color: transparent;
