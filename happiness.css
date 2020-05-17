@@ -30,7 +30,7 @@ body{
     bottom: 0;
     cursor: auto;
 }
-
+@media screen and (min-width: 1000px){
 .mySlides1 {
     text-align: center;
     display: none;
@@ -81,5 +81,66 @@ body{
 .prev:hover, .next:hover {
   background-color: #666;
   color: white;
+}p{
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
+    color: #00698D;
 }
 
+}@media screen and (max-width: 1000px){
+    .mySlides1 {
+        text-align: center;
+        display: none;
+    }
+    .mySlides1 img{
+        vertical-align: middle;
+        width:300px;
+        border: 2px solid black;
+        border-radius:10px ;
+    }
+    
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: fixed;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: fixed;
+      top: 70%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      user-select: none;
+      background-color: black;
+      color: #FAF3EB;
+      margin:0% 20%;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px;
+    }
+    
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+      background-color: #666;
+      color: white;
+    }
+    #bg{
+        display: none;
+    }
+}

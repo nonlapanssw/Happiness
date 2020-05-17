@@ -22,7 +22,7 @@ body, html{
     overflow-y: hidden;
     background-color: #F65832;
 }
-#bg-main-test img{
+#bg-main-test img,#bg-mobile img{
     position: fixed;
     z-index: -1;
 }@media screen and (min-width: 1000px) {
@@ -80,16 +80,72 @@ body, html{
         cursor: pointer;
     }#main-test .tooltip .tooltiptext {
     visibility: hidden;
-    width: 600px;
-    right: 110%;
+    width: 570px;
+    right: 100%;
+    top: -10%;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
       }#main-test .tooltip:hover .tooltiptext{
         visibility: visible;
+      }#bg-mobile{
+          display: none;
       }
 }
     
     @media screen and (max-width: 1000px) {
-        
+        #main-test{
+            position: absolute;
+            border-radius: 10px; 
+            width: 100%;
+            text-align: right;
+            color: #FAF3EB;
+            line-height: 1.5;
+            top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+        }
+        #main-test h1,#main-test h2{
+            font-family: anakotmai;
+            padding-right: 5%;
+        }
+         p{
+             position: absolute;
+            font-family:anakotmailight;
+            padding-right: 2%; 
+            font-size: 10px;
+            bottom: 15%;
+            right: 0%;
+            text-align: right;
+            color: #FAF3EB;
+        }#main-test h1{
+            font-size: 18px;
+        }#main-test h2{
+            font-family:anakotmailight;
+            font-size: 12px;
+            margin: 0;
+        }
+        #main-test button{
+            margin-top: 5%;
+            margin-bottom: 8%;
+            margin-right: 5%;
+            font-family:anakotmai;
+            color: #F7AB37;
+            font-size: 16px;
+            border: #FAF3EB 0.5px solid;
+            background: none;
+            border-radius: 50px;
+            cursor: pointer;
+            padding:  2% ;
+            position: relative;
+            letter-spacing: 1px;
+            z-index: 0;
+        }
+        #main-test button:hover{
+            transition-duration: 0.5s;
+            opacity: 0.5;
+        }.tooltip,#bg-main-test{
+            display: none;
+        }
     }

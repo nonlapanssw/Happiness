@@ -24,7 +24,7 @@ body, html{
 body{
     background-color:#F65832;
 }
-img{
+#bg-result-score img,#bg-question-mobile img,#bg-question img{
     z-index: -1;
     position: fixed;
 }
@@ -46,6 +46,7 @@ img{
 #question-group{
     padding-top: 5%;
     display: inline;
+    
 }#question-group br{
     display: none;
 }
@@ -68,7 +69,7 @@ img{
 }
 #score{
     top: 55%;
-    width: 90%;
+    width: 100%;
     position: fixed;
     text-align: center;
     font-size: 32px;
@@ -146,7 +147,7 @@ img{
 #result-analyze p{
     font-family: anakotmailight;
     font-weight: bolder;
-    line-height: 0.6;  
+    line-height: 1;  
     color: #00698D;
 }
 #result-analyze h3{
@@ -161,7 +162,7 @@ img{
 }#result-analyze{
     margin-top: 30px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 #btn-menu{
     display: inline;
@@ -200,39 +201,26 @@ img{
       }#explan .tooltip:hover .tooltiptext{
         visibility: visible;
       }
-#result-score .tooltip {
-    position: fixed;
-    top: 3%;
-    right: 5%;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-    cursor: pointer;
-    }
-  
-  #result-score .tooltip .tooltiptext {
-    font-family: anakotmailight;
-    font-weight: bolder;
-    font-size: 16px;
-    color: #F65832;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/subjective-well-being.appspot.com/o/info2-01.png?alt=media&token=0dfb827a-bccb-4409-b9a5-f41d138bda1a");
+      #result-score button:hover{
+        transition-duration: 0.5s;
+        opacity: 0.5;
+    }#result-score .tooltip{
+        position: fixed;
+        right:2%;
+        top:4%;
+        cursor: pointer;
+    }#result-score .tooltip .tooltiptext {
     visibility: hidden;
-    width: 500px;
-    line-height: 0.6;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px 5px;
+    width:550px;
     right: 105%;
-    background-size: 500px 100%;
-    background-repeat: no-repeat;
+    top: -25%;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-  }
-  
-  #result-score .tooltip:hover .tooltiptext{
-    visibility: visible;
-    transition-duration: 0.4s;
-  }
+      }
+      #result-score .tooltip:hover .tooltiptext{
+        visibility: visible;
+      }
 }
 @media screen and (max-width: 1000px) {
     #bg-question{
@@ -242,7 +230,7 @@ img{
         position: absolute;
         width: 100%;
         bottom: 15%;
-        right: 0%;
+        right: 5%;
     }
     #page button{
         text-align: right;
@@ -265,17 +253,17 @@ img{
     }#question-frame{
         position: absolute;
         margin: 0;
-        top: 50%;
+        top: 45%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }#number-question{
         background-color: #FAF3EB;
         color: #F65832;
-        padding: 0.5%;
-        width: 300px;
+        padding: 1% ;
+        width: 350px;
         text-align: center;
-        font-size: 24px;
+        font-size: 22px;
         border-radius: 50px;
         margin: 0;
     }#score{
@@ -284,6 +272,7 @@ img{
         text-align: center;
         color: #FAF3EB;
         z-index: 1;
+        margin-left: 5%;
     }
     [type="radio"]:checked,
     [type="radio"]:not(:checked) {
