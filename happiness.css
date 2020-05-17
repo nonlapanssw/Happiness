@@ -24,13 +24,16 @@ body, html{
 }
 body{
     background-color: #FAF3EB;
-}#bg img{
+}#bg img,#bg-mobile img{
     z-index: -1;
     position: fixed;
     bottom: 0;
     cursor: auto;
 }
 @media screen and (min-width: 1000px){
+    #bg-mobile{
+        display: none;
+    }
 .mySlides1 {
     text-align: center;
     display: none;
@@ -115,10 +118,10 @@ body{
     .prev, .next {
       cursor: pointer;
       position: fixed;
-      top: 70%;
+      top: 75%;
       width: auto;
       padding: 16px;
-      margin-top: -22px;
+      margin-top: 12px;
       font-weight: bold;
       font-size: 18px;
       transition: 0.6s ease;
@@ -142,5 +145,11 @@ body{
     }
     #bg{
         display: none;
+    }p{
+        position: absolute;
+        font-size: 12px;
+        bottom: 0%;
+        right: 1%;
+        color: #00698D;
     }
 }

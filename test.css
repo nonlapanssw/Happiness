@@ -24,7 +24,7 @@ body, html{
 body{
     background-color:#F65832;
 }
-#bg-result-score img,#bg-question-mobile img,#bg-question img{
+#bg-result-score img,#bg-question-mobile img,#bg-question img,#bg-result-mobile img{
     z-index: -1;
     position: fixed;
 }
@@ -159,6 +159,7 @@ body{
     color: #F65832;
     display: inline;
     font-family: anakotmai;
+    font-size: 36px;
 }#result-analyze{
     margin-top: 30px;
     text-align: center;
@@ -224,7 +225,7 @@ body{
 }
 @media screen and (max-width: 1000px) {
     #bg-question{
-        visibility: hidden;
+        visibility: none;
     }    
     #page{
         position: absolute;
@@ -272,7 +273,7 @@ body{
         text-align: center;
         color: #FAF3EB;
         z-index: 1;
-        margin-left: 5%;
+        padding-left: 5%;
     }
     [type="radio"]:checked,
     [type="radio"]:not(:checked) {
@@ -315,5 +316,53 @@ body{
     }[type="radio"]:checked + label:hover,
     [type="radio"]:not(:checked) + label:hover {
         color: #F7AB37
+    }#result-analyze p{
+        font-family: anakotmailight;
+        font-weight: bolder;
+        font-size: 18px;
+        line-height: 1;  
+        color: #00698D;
+    }
+    #result-analyze h3{
+        font-size: 16px;
+        font-family: anakotmai;
+        display: inline;
+        color: #00698D;
+    }
+    #result-analyze h2{
+        font-size: 24px;
+        color: #F65832;
+        display: inline;
+        font-family: anakotmai;
+    }#result-analyze{
+        margin-top: 40%;
+        text-align: center;
+        line-height: 1.4;
+    }
+    #btn-menu{
+        display: inline;
+        top: 40%;
+    }   
+    #btn-menu button{
+        position: relative;
+        margin:4% ;
+        padding:1%;
+        font-size:14px;
+        font-family: anakotmai;
+        background-color: transparent;
+        color: #00698D;
+        border: 1px solid #00698D;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    #btn-menu button:hover{
+        transition-duration: 0.5s;
+        opacity: 0.2;
+    }
+    .videoWrapper {
+        padding-bottom: 45%; /* 16:9 */
+        text-align: center;
+    }.tooltip{
+        display: none;
     }
       }
