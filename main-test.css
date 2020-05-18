@@ -174,13 +174,19 @@ body, html{
   /* Modal Content */
   .modal-content {
       color: #F65832;
-    background-color: #FAF3EB;
     margin:2%;
     padding: 40px 20px 60px 20px;
     border: 1px solid #888;
     width: 80%;
     font-size: 12px;
     height: 100%;
+  }#bg-modal img{
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 90%;
+      margin:2%;
+      padding: 10px 10px 60px 20px;
   }
   .modal-content img{
       z-index: 0;
