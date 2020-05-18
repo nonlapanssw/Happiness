@@ -21,8 +21,6 @@ body, html{
     padding:0;
     overflow-y: hidden;
     background-color: #F65832;
-}#bg-modal{
-    display: none;
 }
 #bg-main-test img,#bg-mobile img{
     position: fixed;

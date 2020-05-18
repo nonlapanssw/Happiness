@@ -28,7 +28,7 @@ body{
     z-index: -1;
     position: fixed;
 }
-#data-user,#result-score,#bg-modal{
+#data-user,#result-score{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
@@ -367,7 +367,7 @@ body{
         position: absolute;
         right: 10%;
         top: 2%;
-        z-index: 10;
+        z-index: 1;
     }/* The Modal (background) */
 .modal {
     position: absolute;
@@ -383,14 +383,12 @@ body{
 
 /* Modal Content */
 .modal-content {
-    margin: 2%;
+    margin:10% 2%;
     background-color: #F7AB37;
     color: #F65832;
-    padding: 30px;
-    padding-top: 170px;
+    padding: 100px 30px;   
     border: 1px solid #888;
     width: 80%;
-    height: 100%;
     text-align: center;
     line-height: 2;
 }
