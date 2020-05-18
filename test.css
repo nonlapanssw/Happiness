@@ -32,7 +32,7 @@ body{
 	display: none;
 }
 @media screen and (min-width: 1000px) {
-    #bg-question-mobile,#bg-result-mobile{
+    #bg-question-mobile,#bg-result-mobile,#myModal,#myBtn{
         display: none;
     } 
 #question-frame{
