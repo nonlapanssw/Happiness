@@ -83,12 +83,45 @@ body, html{
         cursor: pointer;
     }#main-test .tooltip .tooltiptext {
     visibility: hidden;
-    width: 570px;
+    width: 565px;
     right: 100%;
-    top: -10%;
+    top: -15%;
+    text-align: center;
+    padding-bottom: 5%;
+
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
+      }.tooltiptext img{
+        z-index: -1; 
+        width: 600px;
+        position: relative;
+      }.tooltiptext h4{
+          padding-left: 10%;
+        text-align: left;
+        font-family: anakotmailight;
+        color: #F65832;
+        font-size: 16px;
+        line-height: 1.3;
+      }.tooltiptext h1{
+        font-family: anakotmai;
+          font-size: 24px;
+          color: #F65832;
+      }.tooltiptext h3{
+        font-family: anakotmailight;
+          font-size: 18px;
+          color: #F65832;
+      }
+      .text-block {
+        padding: 2%;
+        position: absolute;
+        top: 5px;
+        bottom: 2px;
+        width: 100%;
+        height: 100%;
+        line-break: strict;
+        line-height: 1;
+        
       }#main-test .tooltip:hover .tooltiptext{
         visibility: visible;
       }#bg-mobile,.modal,#myBtn{

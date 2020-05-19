@@ -188,21 +188,7 @@ body{
 .videoWrapper {
     padding-bottom: 45%; /* 16:9 */
     text-align: center;
-}#explan .tooltip{
-        position: fixed;
-        right: 3%;
-        top: 3%;
-    }#explan .tooltip .tooltiptext {
-        visibility: hidden;
-    width: 600px;
-    right: 110%;
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-      }#explan .tooltip:hover .tooltiptext{
-        visibility: visible;
-      }
-      #result-score button:hover{
+}#result-score button:hover{
         transition-duration: 0.5s;
         opacity: 0.5;
     }#result-score .tooltip{
@@ -212,12 +198,31 @@ body{
         cursor: pointer;
     }#result-score .tooltip .tooltiptext {
     visibility: hidden;
-    width:550px;
+    width:460px;
     right: 105%;
     top: -25%;
+    text-align: center;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
+      }.tooltiptext img{
+        z-index: -1; 
+        width: 500px;
+        position: relative;
+      }.tooltiptext p{
+          line-height: 1.5;
+          color: #F65832;
+          font-size: 14px;
+      }.tooltiptext h3{
+          font-size: 24px;
+          color: #F65832;
+          line-height: 1;
+      }.text-block {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        padding-left: 70px;
+        padding-right: 20px;
       }
       #result-score .tooltip:hover .tooltiptext{
         visibility: visible;

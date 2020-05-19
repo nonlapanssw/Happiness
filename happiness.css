@@ -40,7 +40,7 @@ body{
 }
 .mySlides1 img{
     vertical-align: middle;
-    width:500px;
+    width:450px;
     border: 2px solid black;
     border-radius:10px ;
 }
@@ -89,6 +89,32 @@ body{
     bottom: 0%;
     right: 1%;
     color: #00698D;
+}#btn-menu{
+    position: absolute;
+    width: 100%;
+    display: inline-flex;
+    bottom: 2%;
+    left: 85%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    
+}
+
+#btn-menu button{
+    position: relative;
+    margin:0.5% 1.5% ;
+    padding:0.5% 1%;
+    font-size:18px;
+    font-family: anakotmai;
+    background-color: transparent;
+    color: #00698D;
+    border: 2px solid #00698D;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#btn-menu button:hover{
+    transition-duration: 0.5s;
+    opacity: 0.2;
 }
 
 }@media screen and (max-width: 1000px){
@@ -108,7 +134,7 @@ body{
         max-width: 1000px;
         position: fixed;
         margin: 0;
-        top: 50%;
+        top: 40%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
@@ -118,7 +144,7 @@ body{
     .prev, .next {
       cursor: pointer;
       position: fixed;
-      top: 75%;
+      top: 60%;
       width: auto;
       padding: 16px;
       font-weight: bold;
@@ -150,5 +176,27 @@ body{
         bottom: 0%;
         right: 1%;
         color: #00698D;
+    }#btn-menu{
+        position: fixed;
+        width: 100%;
+        display: inline-flex;
+        bottom: 10%;
+        left: 60%;
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+        
+    }
+    
+    #btn-menu button{
+        position: relative;
+        margin:0.5% 3% ;
+        padding:0.5% 1%;
+        font-size:18px;
+        font-family: anakotmai;
+        background-color: transparent;
+        color: #00698D;
+        border: 2px solid #00698D;
+        border-radius: 50px;
+        cursor: pointer;
     }
 }
