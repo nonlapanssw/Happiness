@@ -50,7 +50,7 @@ body{
     max-width: 1000px;
     position: fixed;
     margin: 0;
-    top: 50%;
+    top: 45%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -93,7 +93,7 @@ body{
     position: absolute;
     width: 100%;
     display: inline-flex;
-    bottom: 2%;
+    bottom: 10%;
     left: 85%;
     -ms-transform: translate(-50%);
     transform: translate(-50%);
@@ -177,26 +177,7 @@ body{
         right: 1%;
         color: #00698D;
     }#btn-menu{
-        position: fixed;
-        width: 100%;
-        display: inline-flex;
-        bottom: 10%;
-        left: 60%;
-        -ms-transform: translate(-50%);
-        transform: translate(-50%);
+        display: none;
         
-    }
-    
-    #btn-menu button{
-        position: relative;
-        margin:0.5% 3% ;
-        padding:0.5% 1%;
-        font-size:18px;
-        font-family: anakotmai;
-        background-color: transparent;
-        color: #00698D;
-        border: 2px solid #00698D;
-        border-radius: 50px;
-        cursor: pointer;
     }
 }
